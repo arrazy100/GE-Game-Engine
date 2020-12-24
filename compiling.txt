@@ -1,0 +1,1 @@
+g++ -o main -g main.cpp include/*.cpp -o main -lSDL2 -lSDL2_image -lSDL2_ttf -Wno-narrowing && ./main
