@@ -214,5 +214,18 @@ int main(int argc, char **argv)
 
 	// END SECTION FOR GAME LOOP //
 
+	// DESTRUCTOR //
+
+	delete(game);
+	delete(npc);
+	delete(ground);
+	delete(block);
+	delete(npcPhysics);
+	delete(groundPhysics);
+	delete(blockPhysics);
+	delete(input);
+
+	// END SECTION FOR DESTRUCTOR //
+
 	return 0;
 }
