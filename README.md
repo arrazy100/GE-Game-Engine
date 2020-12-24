@@ -1,5 +1,5 @@
 <b>Implemented Features:</b>
-<br/><br/>
+<br/>
 Window<br/>
 Sprite<br/>
 Animation<br/>
@@ -8,9 +8,8 @@ Text<br/>
 Simple Physics</br>
 2D Camera</br>
 <br/>
-<br/>
 <b>To-do Lists:</b>
-<br/><br/>
+<br/>
 Keyboard<br/>
 Sound<br/>
 Tilemap<br/>
