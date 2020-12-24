@@ -25,7 +25,7 @@ namespace GE
 		Physics(bool is_static);
 		void setBody(GE::Sprite *body);
 		void setBody(GE::Shape *body);
-		void setCollisionRect(SDL_Rect rect);
+		void update();
 		void setGravity(double gravity);
 		void setRect(std::string rectPoint, double position);
 		void setVelocityX(double xvelocity);

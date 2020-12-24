@@ -26,7 +26,6 @@ namespace GE
 		~Init();
 		bool update();
 		void present();
-		const Uint8 *keyListener();
 		SDL_Renderer *getRenderer();
 		SDL_Window *getWindow();
 		double getDeltaTime();

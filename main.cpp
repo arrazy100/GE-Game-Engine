@@ -4,6 +4,7 @@
 #include "include/Sprite.h"
 #include "include/Shape.h"
 #include "include/Text.h"
+#include "include/Input.h"
 
 /**
  * @brief
@@ -36,9 +37,7 @@ int main(int argc, char **argv)
 
 	//set npc physics body to npc sprites
 	npcPhysics->setBody(npc);
-
-	//set npc physics collision rect
-	npcPhysics->setCollisionRect(npc->getRect());
+	npcPhysics->update();
 
 	//set the gravity for npc physics
 	npcPhysics->setGravity(200);
@@ -58,7 +57,6 @@ int main(int argc, char **argv)
 	//ground physics
 	GE::Physics* groundPhysics = new GE::Physics(true);
 	groundPhysics->setBody(ground);
-	groundPhysics->setCollisionRect(ground->getRect());
 
 	//ground size
 	double ground_size[2] = {1280, 32};
@@ -69,19 +67,19 @@ int main(int argc, char **argv)
 	//block physics
 	GE::Physics* blockPhysics = new GE::Physics(true);
 	blockPhysics->setBody(block);
-	blockPhysics->setCollisionRect(block->getRect());
 
 	//block size
 	double block_size[2] = {64, 32};
 
+	//keyboard input
+	GE::Input* input = new GE::Input();
+	
 	//other variable
-	const Uint8 *key = game->keyListener(); //set keyboard listener
 	double dt;
-	std::string player_state = "go_right";
 	std::string collide = "";
 	bool isJumping = false;
 	bool isCeiling = false;
-	double timer = 0;
+	int player_direction = 1;
 
 	// camera scrolling
 	game->initCamera(1280, 480);
@@ -112,86 +110,92 @@ int main(int argc, char **argv)
 				npcPhysics->setVelocityY(npcPhysics->getGravity()); // limit y velocity to physics gravity
 		}
 
-		groundPhysics->setCollisionRect(ground->getRect());
-		blockPhysics->setCollisionRect(block->getRect());
+		groundPhysics->update();
+		blockPhysics->update();
 
-		if (npcPhysics->detectAABB(groundPhysics) == "topWall") {
+		if (npcPhysics->detectAABB(groundPhysics) == "top") {
 			isJumping = false;
 		}
 
 		collide = npcPhysics->detectAABB(blockPhysics);
 
 		// if npc collide with top of the shape
-		if (collide == "topWall")
+		if (collide == "top")
 		{
 			isJumping = false;
 		}
-		else if (collide == "bottomWall") // if npc collide with bottom of the shape
+		else if (collide == "bottom") // if npc collide with bottom of the shape
 		{
 			isJumping = true;
 		}
-		else if (collide == "fallFromTopWall") // if npc not collide with anything (fall from shape)
+		else if (collide == "fallFromTop") // if npc not collide with anything (fall from shape)
 		{
 			isJumping = true;
+		}
+		else if (collide == "right")
+		{
+			npcPhysics->setVelocityX(0);
+			npcPhysics->setRect("right", blockPhysics->getRect("left") - 1);
+		}
+		else if (collide == "left")
+		{
+			npcPhysics->setVelocityX(0);
+			npcPhysics->setRect("left", blockPhysics->getRect("right") + 1);
 		}
 
 		// END SECTION FOR PHYSICS //
 
 		// START SECTION FOR KEYBOARDS //
 
-		if (key[SDL_SCANCODE_RIGHT] && key[SDL_SCANCODE_LEFT]) // if keyboard right and left pressed at the same time
+		input->updateKeyboard();
+
+		if (input->getKeyboardPressed("Right") && input->getKeyboardPressed("Left"))
 		{
-			npcPhysics->setVelocityX(0); // stop npc
+			npcPhysics->setVelocityX(0);
 		}
-		else if (key[SDL_SCANCODE_RIGHT]) // if keyboard right pressed
+		else if (input->getKeyboardPressed("Right"))
 		{
-			player_state = "go_right"; // set player state to go_right
-			
 			//play animation of npc
 			if (!isJumping)
-				npc->setAnimation(player_state, 0.2);
+				npc->setAnimation("go_right", 0.2);
 
+			player_direction = 1;
 			//set npc horizontal velocity
 			npcPhysics->setVelocityX(200);
 		}
-		else if (key[SDL_SCANCODE_LEFT])
+		else if (input->getKeyboardPressed("Left"))
 		{
-			player_state = "go_left"; // set player state to go_left
-
 			//play animation of npc
 			if (!isJumping)
-				npc->setAnimation(player_state, 0.2);
+				npc->setAnimation("go_left", 0.2);
 
+			player_direction = -1;
 			//set npc horizontal velocity
 			npcPhysics->setVelocityX(200 * -1);
 		}
-		else //key releases
+		
+		if (input->getKeyboardPressed("Up") && !isJumping)
 		{
-			if (player_state == "go_right")
-			{
-				//set animation to idle, and velocity to 0
-				npc->setClip(idle_r);
-				npcPhysics->setVelocityX(0);
-			}
-			if (player_state == "go_left")
-			{
-				//set animation to idle, and velocity to 0
-				npc->setClip(idle_l);
-				npcPhysics->setVelocityX(0);
-			}
-			if (isJumping) // if npc is jumping
-			{
-				//play jump animation
-				npc->setAnimation("jumping", 0.2);
-			}
-		}
-
-		// if keyboard up is pressed and npc is not jumping
-		if (key[SDL_SCANCODE_UP] && !isJumping)
-		{
-			//set jumping condition and vertical velocity of npc
 			isJumping = true;
 			npcPhysics->setVelocityY(-npcPhysics->getGravity());
+		}
+
+		if (input->getKeyboardReleased("Right") && !isJumping)
+		{
+			//set animation to idle, and velocity to 0
+			npc->setClip(idle_r);
+			npcPhysics->setVelocityX(0);
+		}
+		else if (input->getKeyboardReleased("Left") && !isJumping)
+		{
+			//set animation to idle, and velocity to 0
+			npc->setClip(idle_l);
+			npcPhysics->setVelocityX(0);
+		}
+		else if (input->getKeyboardReleased("Up") && !isJumping)
+		{
+			if (player_direction) npc->setClip(idle_r);
+			else npc->setClip(idle_l);
 		}
 
 		// END SECTION FOR KEYBOARDS //

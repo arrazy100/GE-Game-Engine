@@ -81,15 +81,6 @@ bool GE::Init::update()
 
 /**
  * @brief
- * get keyboard pressed
- */
-const Uint8 *GE::Init::keyListener()
-{
-	return SDL_GetKeyboardState(NULL);
-}
-
-/**
- * @brief
  * game update on loop
  */
 void GE::Init::present()

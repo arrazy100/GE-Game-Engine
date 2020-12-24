@@ -15,9 +15,10 @@ void GE::Physics::setBody(GE::Shape *body)
 	_body_shape = body;
 }
 
-void GE::Physics::setCollisionRect(SDL_Rect rect)
+void GE::Physics::update()
 {
-	_rect = rect;
+	if (_body_sprite) _rect = _body_sprite->getRect();
+	else if (_body_shape) _rect = _body_shape->getRect();
 }
 
 void GE::Physics::setGravity(double gravity)
@@ -124,22 +125,18 @@ std::string GE::Physics::detectAABB(GE::Physics* b)
 		{
 			setVelocityY(0);
 			setRect("bottom", b->getRect("top"));
-			return "topWall";
+			return "top";
 		}
 		else if (getRect("right") > b->getRect("left") + 1 && getRect("left") + 1 < b->getRect("right") && getVelocityY() < 0)
 		{
 			setVelocityY(0);
 			setRect("top", b->getRect("bottom"));
-			return "bottomWall";
+			return "bottom";
 		}
 		else
 		{
-			if (getVelocityX() > 0)
-				setRect("right", b->getRect("left") - 1);
-			else if (getVelocityX() < 0)
-				setRect("left", b->getRect("right") + 1);
-			setVelocityX(0);
-			return "sideWall";
+			if (getVelocityX() > 0) return "right";
+			else if (getVelocityX() < 0) return "left";
 		}
 	}
 
@@ -148,7 +145,7 @@ std::string GE::Physics::detectAABB(GE::Physics* b)
 		if (getRect("bottom") == b->getRect("top") &&
 			(getRect("right") < b->getRect("left") || getRect("left") > b->getRect("right")))
 		{
-			return "fallFromTopWall";
+			return "fallFromTop";
 		}
 	}
 	return "None";
@@ -170,7 +167,7 @@ std::string GE::Physics::detectMultipleAABB(std::initializer_list<GE::Physics> p
 			getRect("left") + 1 < b.getRect("right"))
 		{
 			setVelocityY(0);
-			return "topWall";
+			return "top";
 		}
 	}
 	return "None";
