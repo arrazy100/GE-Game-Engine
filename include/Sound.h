@@ -7,7 +7,8 @@ namespace GE
     {
         private:
         public:
-        Sound();
+            Sound();
+            ~Sound();
     };
 }
 

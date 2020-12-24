@@ -10,8 +10,8 @@ namespace GE
 	class Sprite
 	{
 	private:
-		SDL_Renderer *_renderer = NULL;
-		SDL_Texture *_texture = NULL;
+		SDL_Renderer* _renderer = NULL;
+		SDL_Texture* _texture = NULL;
 		std::string _filename = "";
 		SDL_Rect _rect = {0, 0, 0, 0};
 		double _dt;
@@ -36,7 +36,7 @@ namespace GE
 		double _animation_speed_counter = 0;
 
 	public:
-		Sprite(SDL_Renderer *renderer, std::string image);
+		Sprite(SDL_Renderer* renderer, std::string image);
 		~Sprite();
 		void loadImage(std::string imagePath);
 		SDL_Rect getRect();

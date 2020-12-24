@@ -9,10 +9,10 @@ namespace GE
     class Text
     {
     private:
-        TTF_Font *_font = NULL;
-        GE::Init *_init = NULL;
-        SDL_Surface *_surface = NULL;
-        SDL_Texture *_texture = NULL;
+        TTF_Font* _font = NULL;
+        SDL_Renderer* _renderer = NULL;
+        SDL_Surface* _surface = NULL;
+        SDL_Texture* _texture = NULL;
         SDL_Rect _dstrect = {0.0, 0.0, 0.0, 0.0};
         SDL_Color _c;
         std::string _text = "";
@@ -27,7 +27,7 @@ namespace GE
 
     public:
         //constructor
-        Text(GE::Init *init, std::string text, std::string font, int size, SDL_Color c, int style, int max_length);
+        Text(SDL_Renderer* renderer, std::string text, std::string font, int size, SDL_Color c, int style, int max_length);
         ~Text();
         void calculateSize();
         void changeText(std::string new_text, bool scroll);

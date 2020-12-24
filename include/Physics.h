@@ -13,8 +13,8 @@ namespace GE
 	class Physics
 	{
 	private:
-		GE::Sprite *_body_sprite = NULL;
-		GE::Shape *_body_shape = NULL;
+		GE::Sprite* _body_sprite = NULL;
+		GE::Shape* _body_shape = NULL;
 		SDL_Rect _rect;
 		double _gravity = 0;
 		double _xvelocity = 0;
@@ -23,8 +23,8 @@ namespace GE
 
 	public:
 		Physics(bool is_static);
-		void setBody(GE::Sprite *body);
-		void setBody(GE::Shape *body);
+		void setBody(GE::Sprite* body);
+		void setBody(GE::Shape* body);
 		void update();
 		void setGravity(double gravity);
 		void setRect(std::string rectPoint, double position);

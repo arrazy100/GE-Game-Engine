@@ -5,12 +5,12 @@ GE::Physics::Physics(bool is_static)
 	_is_static = is_static;
 }
 
-void GE::Physics::setBody(GE::Sprite *body)
+void GE::Physics::setBody(GE::Sprite* body)
 {
 	_body_sprite = body;
 }
 
-void GE::Physics::setBody(GE::Shape *body)
+void GE::Physics::setBody(GE::Shape* body)
 {
 	_body_shape = body;
 }

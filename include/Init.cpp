@@ -92,12 +92,12 @@ void GE::Init::present()
  * @brief
  * get renderer of window
  */
-SDL_Renderer *GE::Init::getRenderer()
+SDL_Renderer* GE::Init::getRenderer()
 {
 	return _renderer;
 }
 
-SDL_Window *GE::Init::getWindow()
+SDL_Window* GE::Init::getWindow()
 {
 	return _window;
 }

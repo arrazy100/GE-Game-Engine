@@ -6,9 +6,9 @@
  * @brief
  * @param init passing GE::Init object to get current renderer
  */
-GE::Text::Text(GE::Init *init, std::string text, std::string font, int size, SDL_Color c, int style, int max_length)
+GE::Text::Text(SDL_Renderer* renderer, std::string text, std::string font, int size, SDL_Color c, int style, int max_length)
 {
-    _init = init;
+    _renderer = renderer;
     _text = text;
     _font = TTF_OpenFont(font.c_str(), size);
     _c = c;
@@ -16,7 +16,7 @@ GE::Text::Text(GE::Init *init, std::string text, std::string font, int size, SDL
     _size = size;
     TTF_SetFontStyle(_font, style);
     _surface = TTF_RenderText_Blended_Wrapped(_font, _text.c_str(), c, max_length);
-    _texture = SDL_CreateTextureFromSurface(_init->getRenderer(), _surface);
+    _texture = SDL_CreateTextureFromSurface(_renderer, _surface);
     SDL_QueryTexture(_texture, NULL, NULL, 0, 0);
 }
 
@@ -25,6 +25,9 @@ GE::Text::~Text()
     TTF_CloseFont(_font);
     SDL_DestroyTexture(_texture);
     SDL_FreeSurface(_surface);
+    _texture = NULL;
+    _surface = NULL;
+    _renderer = NULL;
 }
 
 void GE::Text::calculateSize()
@@ -57,7 +60,7 @@ void GE::Text::changeText(std::string new_text, bool scroll)
         _text = new_text;
         _surface = TTF_RenderText_Blended_Wrapped(_font, _text.c_str(), _c, _max_length);
     }
-    _texture = SDL_CreateTextureFromSurface(_init->getRenderer(), _surface);
+    _texture = SDL_CreateTextureFromSurface(_renderer, _surface);
     calculateSize();
     _change_text = true;
 }
@@ -103,5 +106,5 @@ void GE::Text::draw(double x, double y, double dt)
     }
     _dstrect.x = x;
     _dstrect.y = y;
-    SDL_RenderCopy(_init->getRenderer(), _texture, NULL, &_dstrect);
+    SDL_RenderCopy(_renderer, _texture, NULL, &_dstrect);
 }

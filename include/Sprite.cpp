@@ -4,7 +4,7 @@
  * @brief
  * @param init passing GE::Init object to get current renderer
  */
-GE::Sprite::Sprite(SDL_Renderer *renderer, std::string image = "")
+GE::Sprite::Sprite(SDL_Renderer* renderer, std::string image = "")
 {
 	_renderer = renderer;
 	if (image != "")

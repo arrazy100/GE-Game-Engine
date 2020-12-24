@@ -4,7 +4,7 @@
  * @brief
  * @param init passing GE::Init object to get current renderer
  */
-GE::Shape::Shape(SDL_Renderer *renderer) : _renderer(renderer)
+GE::Shape::Shape(SDL_Renderer* renderer) : _renderer(renderer)
 {
 }
 

@@ -26,8 +26,8 @@ namespace GE
 		~Init();
 		bool update();
 		void present();
-		SDL_Renderer *getRenderer();
-		SDL_Window *getWindow();
+		SDL_Renderer* getRenderer();
+		SDL_Window* getWindow();
 		double getDeltaTime();
 		void initCamera(int width, int height);
 		void setCamera(GE::Sprite* object);
