@@ -5,6 +5,7 @@
 #include "include/Shape.h"
 #include "include/Text.h"
 #include "include/Input.h"
+#include "include/Tilemap.h"
 
 /**
  * @brief
@@ -12,6 +13,7 @@
  * @param argv
  * @return
  */
+
 int main(int argc, char **argv)
 {
 	//init window and renderer
@@ -83,6 +85,10 @@ int main(int argc, char **argv)
 
 	// camera scrolling
 	game->initCamera(1280, 480);
+
+	// map
+	GE::Tilemap* map = new GE::Tilemap(game->getRenderer(), "maps/tes.tmx");
+	map->addAllLayer();
 
 	// START SECTION FOR GAME LOOP //
 
@@ -202,9 +208,10 @@ int main(int argc, char **argv)
 
 		// START SECTION FOR DRAW OBJECTS //
 
+		map->render(dt);
 		npc->draw(dt); //draw npc
-		ground->drawRectangle(0, 448, ground_size, {0, 0, 0, 255}); //draw ground
-		block->drawRectangle(600, 384, block_size, {0, 0, 0, 255}); //draw block
+		//ground->drawRectangle(0, 448, ground_size, {0, 0, 0, 255}); //draw ground
+		//block->drawRectangle(600, 384, block_size, {0, 0, 0, 255}); //draw block
 
 		// END SECTION FOR DRAW OBJECTS //
 
@@ -224,6 +231,7 @@ int main(int argc, char **argv)
 	delete(groundPhysics);
 	delete(blockPhysics);
 	delete(input);
+	delete(map);
 
 	// END SECTION FOR DESTRUCTOR //
 
