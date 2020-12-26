@@ -124,15 +124,15 @@ void GE::Init::setCamera(GE::Sprite* object)
 
 	if (_camera.x <= 0)
 		_camera.x = 0;
-	else if (_camera.x >= (world_width - _camera.w / 2))
-		_camera.x = (world_width - _camera.w / 2);
+	else if (_camera.x >= (world_width - _camera.w / 3))
+		_camera.x = (world_width - _camera.w / 3);
 
-	if (object->getPositionX() > world_width - _camera.w / 2)
-		object->setPositionX(world_width - _camera.w / 2);
-	else if (object->getPositionX() < _camera.w / 2)
-		object->setPositionX(_camera.w / 2);
+	if (object->getPositionX() > world_width - _camera.w / 3)
+		object->setPositionX(world_width - _camera.w / 3);
+	else if (object->getPositionX() < _camera.w / 3)
+		object->setPositionX(_camera.w / 3);
 	
-	_camera.x = object->getPositionX() - _camera.w / 2;
+	_camera.x = object->getPositionX() - _camera.w / 3;
 }
 
 void GE::Init::updateCamera()

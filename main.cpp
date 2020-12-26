@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 	npc->setClip(idle_r);
 
 	//set position of npc on screen
-	npc->setPosition(320, 416);
+	npc->setPosition(100, 416);
 
 	//create physics for npc (false = dynamic physics)
 	GE::Physics* npcPhysics = new GE::Physics(false);
@@ -53,26 +53,6 @@ int main(int argc, char **argv)
 	npc->createAnimation("go_left", {32, 32, 96, 64}, size);
 	npc->createAnimation("jumping", {128, 96, 192, 128}, size);
 
-	//create ground
-	GE::Shape* ground = new GE::Shape(game->getRenderer());
-
-	//ground physics
-	GE::Physics* groundPhysics = new GE::Physics(true);
-	groundPhysics->setBody(ground);
-
-	//ground size
-	double ground_size[2] = {1280, 32};
-
-	//create block
-	GE::Shape* block = new GE::Shape(game->getRenderer());
-
-	//block physics
-	GE::Physics* blockPhysics = new GE::Physics(true);
-	blockPhysics->setBody(block);
-
-	//block size
-	double block_size[2] = {64, 32};
-
 	//keyboard input
 	GE::Input* input = new GE::Input();
 	
@@ -89,6 +69,7 @@ int main(int argc, char **argv)
 	// map
 	GE::Tilemap* map = new GE::Tilemap(game->getRenderer(), "maps/tes.tmx");
 	map->addAllLayer();
+	std::vector<GE::Physics*> mapPhysics = map->getObjectPhysics();
 
 	// START SECTION FOR GAME LOOP //
 
@@ -105,9 +86,6 @@ int main(int argc, char **argv)
 
 		// START SECTION FOR PHYSICS //
 
-		groundPhysics->update();
-		blockPhysics->update();
-
 		// npc jump condition
 		if (isJumping)
 		{
@@ -119,36 +97,32 @@ int main(int argc, char **argv)
 				npcPhysics->setVelocityY(npcPhysics->getGravity()); // limit y velocity to physics gravity
 		}
 
-		if (npcPhysics->detectAABB(groundPhysics) == "top") {
-			isJumping = false;
-		}
-
-		collide = npcPhysics->detectAABB(blockPhysics);
-
-		// if npc collide with top of the shape
-		if (collide == "top")
+		for (int i = 0; i < mapPhysics.size(); i++)
 		{
-			isJumping = false;
+			collide = npcPhysics->detectAABB(mapPhysics[i]);
+			if (collide == "top")
+			{
+				isJumping = false;
+			}
+			else if (collide == "bottom") // if npc collide with bottom of the shape
+			{
+				isJumping = true;
+			}
+			else if (collide == "fallFromTop") // if npc not collide with anything (fall from shape)
+			{
+				isJumping = true;
+			}
+			else if (collide == "right")
+			{
+				npcPhysics->setVelocityX(0);
+				npcPhysics->setRect("right", mapPhysics[i]->getRect("left") - 1);
+			}
+			else if (collide == "left")
+			{
+				npcPhysics->setVelocityX(0);
+				npcPhysics->setRect("left", mapPhysics[i]->getRect("right") + 1);
+			}
 		}
-		else if (collide == "bottom") // if npc collide with bottom of the shape
-		{
-			isJumping = true;
-		}
-		else if (collide == "fallFromTop") // if npc not collide with anything (fall from shape)
-		{
-			isJumping = true;
-		}
-		else if (collide == "right")
-		{
-			npcPhysics->setVelocityX(0);
-			npcPhysics->setRect("right", blockPhysics->getRect("left") - 1);
-		}
-		else if (collide == "left")
-		{
-			npcPhysics->setVelocityX(0);
-			npcPhysics->setRect("left", blockPhysics->getRect("right") + 1);
-		}
-
 		// END SECTION FOR PHYSICS //
 
 		// START SECTION FOR KEYBOARDS //
@@ -210,8 +184,6 @@ int main(int argc, char **argv)
 
 		map->render(dt);
 		npc->draw(dt); //draw npc
-		//ground->drawRectangle(0, 448, ground_size, {0, 0, 0, 255}); //draw ground
-		//block->drawRectangle(600, 384, block_size, {0, 0, 0, 255}); //draw block
 
 		// END SECTION FOR DRAW OBJECTS //
 
@@ -225,11 +197,7 @@ int main(int argc, char **argv)
 
 	delete(game);
 	delete(npc);
-	delete(ground);
-	delete(block);
 	delete(npcPhysics);
-	delete(groundPhysics);
-	delete(blockPhysics);
 	delete(input);
 	delete(map);
 

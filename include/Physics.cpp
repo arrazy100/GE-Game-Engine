@@ -15,6 +15,11 @@ void GE::Physics::setBody(GE::Shape* body)
 	_body_shape = body;
 }
 
+void GE::Physics::setBody(SDL_Rect rect)
+{
+	_rect = rect;
+}
+
 void GE::Physics::update()
 {
 	if (_body_sprite) _rect = _body_sprite->getRect();
