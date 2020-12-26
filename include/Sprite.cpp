@@ -55,7 +55,7 @@ void GE::Sprite::loadImage(std::string imagePath)
 
 SDL_Rect GE::Sprite::getRect()
 {
-	SDL_Rect rect = {_position_x, _position_y, _rect.w, _rect.h};
+	SDL_Rect rect = {(int)_position_x, (int)_position_y, _rect.w, _rect.h};
 	return rect;
 }
 
@@ -136,7 +136,7 @@ void GE::Sprite::moveVertical(double velocity)
 void GE::Sprite::draw(double dt)
 {
 	//render quad
-	SDL_Rect renderQuad = {_position_x, _position_y, _rect.w, _rect.h};
+	SDL_Rect renderQuad = {(int)_position_x, (int)_position_y, _rect.w, _rect.h};
 
 	_dt = dt;
 

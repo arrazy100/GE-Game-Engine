@@ -1,0 +1,43 @@
+[
+{
+  "directory": "/home/afar0308/Documents/Game Engine V2/build",
+  "command": "/usr/bin/g++-7   -isystem /usr/include/SDL2  -g   -o CMakeFiles/GameEngineExample.dir/main.cpp.o -c \"/home/afar0308/Documents/Game Engine V2/main.cpp\"",
+  "file": "/home/afar0308/Documents/Game Engine V2/main.cpp"
+},
+
+{
+  "directory": "/home/afar0308/Documents/Game Engine V2/build",
+  "command": "/usr/bin/g++-7   -isystem /usr/include/SDL2  -g   -o include/CMakeFiles/GameEngineLibrary.dir/Init.cpp.o -c \"/home/afar0308/Documents/Game Engine V2/include/Init.cpp\"",
+  "file": "/home/afar0308/Documents/Game Engine V2/include/Init.cpp"
+},
+
+{
+  "directory": "/home/afar0308/Documents/Game Engine V2/build",
+  "command": "/usr/bin/g++-7   -isystem /usr/include/SDL2  -g   -o include/CMakeFiles/GameEngineLibrary.dir/Input.cpp.o -c \"/home/afar0308/Documents/Game Engine V2/include/Input.cpp\"",
+  "file": "/home/afar0308/Documents/Game Engine V2/include/Input.cpp"
+},
+
+{
+  "directory": "/home/afar0308/Documents/Game Engine V2/build",
+  "command": "/usr/bin/g++-7   -isystem /usr/include/SDL2  -g   -o include/CMakeFiles/GameEngineLibrary.dir/Physics.cpp.o -c \"/home/afar0308/Documents/Game Engine V2/include/Physics.cpp\"",
+  "file": "/home/afar0308/Documents/Game Engine V2/include/Physics.cpp"
+},
+
+{
+  "directory": "/home/afar0308/Documents/Game Engine V2/build",
+  "command": "/usr/bin/g++-7   -isystem /usr/include/SDL2  -g   -o include/CMakeFiles/GameEngineLibrary.dir/Shape.cpp.o -c \"/home/afar0308/Documents/Game Engine V2/include/Shape.cpp\"",
+  "file": "/home/afar0308/Documents/Game Engine V2/include/Shape.cpp"
+},
+
+{
+  "directory": "/home/afar0308/Documents/Game Engine V2/build",
+  "command": "/usr/bin/g++-7   -isystem /usr/include/SDL2  -g   -o include/CMakeFiles/GameEngineLibrary.dir/Sprite.cpp.o -c \"/home/afar0308/Documents/Game Engine V2/include/Sprite.cpp\"",
+  "file": "/home/afar0308/Documents/Game Engine V2/include/Sprite.cpp"
+},
+
+{
+  "directory": "/home/afar0308/Documents/Game Engine V2/build",
+  "command": "/usr/bin/g++-7   -isystem /usr/include/SDL2  -g   -o include/CMakeFiles/GameEngineLibrary.dir/Text.cpp.o -c \"/home/afar0308/Documents/Game Engine V2/include/Text.cpp\"",
+  "file": "/home/afar0308/Documents/Game Engine V2/include/Text.cpp"
+}
+]

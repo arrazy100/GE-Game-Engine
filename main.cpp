@@ -99,6 +99,9 @@ int main(int argc, char **argv)
 
 		// START SECTION FOR PHYSICS //
 
+		groundPhysics->update();
+		blockPhysics->update();
+
 		// npc jump condition
 		if (isJumping)
 		{
@@ -109,9 +112,6 @@ int main(int argc, char **argv)
 			if (npcPhysics->getVelocityY() > npcPhysics->getGravity())
 				npcPhysics->setVelocityY(npcPhysics->getGravity()); // limit y velocity to physics gravity
 		}
-
-		groundPhysics->update();
-		blockPhysics->update();
 
 		if (npcPhysics->detectAABB(groundPhysics) == "top") {
 			isJumping = false;

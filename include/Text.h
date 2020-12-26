@@ -13,7 +13,7 @@ namespace GE
         SDL_Renderer* _renderer = NULL;
         SDL_Surface* _surface = NULL;
         SDL_Texture* _texture = NULL;
-        SDL_Rect _dstrect = {0.0, 0.0, 0.0, 0.0};
+        SDL_Rect _dstrect = {0, 0, 0, 0};
         SDL_Color _c;
         std::string _text = "";
         std::string _temp = "";

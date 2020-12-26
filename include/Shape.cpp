@@ -31,7 +31,7 @@ SDL_Rect GE::Shape::getRect()
 void GE::Shape::drawRectangle(double x, double y, double size[2], SDL_Color c)
 {
 	SDL_SetRenderDrawColor(_renderer, c.r, c.g, c.b, c.a); //color of rectangle
-	_rect = {x, y, size[0], size[1]};
+	_rect = {(int)x, (int)y, (int)size[0], (int)size[1]};
 	SDL_RenderFillRect(_renderer, &_rect);
 }
 
