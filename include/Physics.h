@@ -28,14 +28,14 @@ namespace GE
 		void setBody(SDL_Rect rect);
 		void update();
 		void setGravity(double gravity);
-		void setRect(std::string rectPoint, double position);
+		void setRect(std::string rectPoint, int position);
 		void setVelocityX(double xvelocity);
 		void setVelocityY(double yvelocity);
 		bool isStatic();
-		double getBodyCoordinateX();
-		double getBodyCoordinateY();
+		int getBodyCoordinateX();
+		int getBodyCoordinateY();
 		double getGravity();
-		double getRect(std::string rectPoint);
+		int getRect(std::string rectPoint);
 		double getVelocityX();
 		double getVelocityY();
 		SDL_Rect getRect();

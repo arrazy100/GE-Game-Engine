@@ -22,7 +22,20 @@ void GE::Physics::setBody(SDL_Rect rect)
 
 void GE::Physics::update()
 {
-	if (_body_sprite) _rect = _body_sprite->getRect();
+	if (_body_sprite)
+	{
+		_rect = _body_sprite->getRect();
+		if (_xvelocity != 0)
+		{
+			_body_sprite->moveHorizontal(_xvelocity);
+			_rect.x = _body_sprite->getPositionX();
+		}
+		if (_yvelocity != 0)
+		{
+			_body_sprite->moveVertical(_yvelocity);
+			_rect.y = _body_sprite->getPositionY();
+		}
+	}
 	else if (_body_shape) _rect = _body_shape->getRect();
 }
 
@@ -31,16 +44,16 @@ void GE::Physics::setGravity(double gravity)
 	_gravity = gravity;
 }
 
-void GE::Physics::setRect(std::string rectPoint, double position)
+void GE::Physics::setRect(std::string rectPoint, int position)
 {
 	if (rectPoint == "left")
-		_rect.x = position;
+		_rect.x = (int)position;
 	else if (rectPoint == "right")
-		_rect.x = position - _rect.w;
+		_rect.x = (int)position - _rect.w;
 	else if (rectPoint == "top")
-		_rect.y = position;
+		_rect.y = (int)position;
 	else if (rectPoint == "bottom")
-		_rect.y = position - _rect.h;
+		_rect.y = (int)position - _rect.h;
 
 	if (_body_sprite != NULL)
 	{
@@ -52,15 +65,11 @@ void GE::Physics::setRect(std::string rectPoint, double position)
 void GE::Physics::setVelocityX(double xvelocity)
 {
 	_xvelocity = xvelocity;
-	_body_sprite->moveHorizontal(xvelocity);
-	_rect.x = _body_sprite->getPositionX();
 }
 
 void GE::Physics::setVelocityY(double yvelocity)
 {
 	_yvelocity = yvelocity;
-	_body_sprite->moveVertical(yvelocity);
-	_rect.y = _body_sprite->getPositionY();
 }
 
 bool GE::Physics::isStatic()
@@ -68,12 +77,12 @@ bool GE::Physics::isStatic()
 	return _is_static;
 }
 
-double GE::Physics::getBodyCoordinateX()
+int GE::Physics::getBodyCoordinateX()
 {
 	return _rect.x;
 }
 
-double GE::Physics::getBodyCoordinateY()
+int GE::Physics::getBodyCoordinateY()
 {
 	return _rect.y;
 }
@@ -88,7 +97,7 @@ SDL_Rect GE::Physics::getRect()
 	return _rect;
 }
 
-double GE::Physics::getRect(std::string rectPoint)
+int GE::Physics::getRect(std::string rectPoint)
 {
 	if (rectPoint == "left")
 	{
@@ -126,13 +135,13 @@ std::string GE::Physics::detectAABB(GE::Physics* b)
 	// check intersection
 	if (SDL_HasIntersection(&_rect, &bb))
 	{
-		if (getRect("right") > b->getRect("left") + 1 && getRect("left") + 1 < b->getRect("right") && getVelocityY() > 0)
+		if (getRect("right") > b->getRect("left") && getRect("left") + 1 < b->getRect("right") && getVelocityY() > 0)
 		{
 			setVelocityY(0);
 			setRect("bottom", b->getRect("top"));
 			return "top";
 		}
-		else if (getRect("right") > b->getRect("left") + 1 && getRect("left") + 1 < b->getRect("right") && getVelocityY() < 0)
+		else if (getRect("right") > b->getRect("left") && getRect("left") + 1 < b->getRect("right") && getVelocityY() < 0)
 		{
 			setVelocityY(0);
 			setRect("top", b->getRect("bottom"));
@@ -140,12 +149,22 @@ std::string GE::Physics::detectAABB(GE::Physics* b)
 		}
 		else
 		{
-			if (getVelocityX() > 0) return "right";
-			else if (getVelocityX() < 0) return "left";
+			if (getVelocityX() > 0)
+			{
+				setVelocityX(-1);
+				setRect("right", b->getRect("left") - 1);
+				return "right";
+			}
+			else if (getVelocityX() < 0)
+			{
+				setVelocityX(1);
+				setRect("left", b->getRect("right") + 1);
+				return "left";
+			}
 		}
 	}
 
-	if (_gravity > 0)
+	else if (_gravity > 0)
 	{
 		if (getRect("bottom") == b->getRect("top") &&
 			(getRect("right") < b->getRect("left") || getRect("left") > b->getRect("right")))

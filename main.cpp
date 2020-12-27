@@ -6,6 +6,7 @@
 #include "include/Text.h"
 #include "include/Input.h"
 #include "include/Tilemap.h"
+#include "include/Box2D.h"
 
 /**
  * @brief
@@ -34,16 +35,6 @@ int main(int argc, char **argv)
 	//set position of npc on screen
 	npc->setPosition(100, 416);
 
-	//create physics for npc (false = dynamic physics)
-	GE::Physics* npcPhysics = new GE::Physics(false);
-
-	//set npc physics body to npc sprites
-	npcPhysics->setBody(npc);
-	npcPhysics->update();
-
-	//set the gravity for npc physics
-	npcPhysics->setGravity(200);
-
 	// size of npc
 	double size[2] = {32, 32};
 
@@ -71,6 +62,20 @@ int main(int argc, char **argv)
 	map->addAllLayer();
 	std::vector<GE::Physics*> mapPhysics = map->getObjectPhysics();
 
+	// box2d
+	b2Vec2 gravity(0.0, 10.0);
+	b2World world(gravity);
+	GE::Box2D* npcPhysics = new GE::Box2D(&world, 100, 300, 32, 32, false);
+	GE::Box2D* ground = new GE::Box2D(&world, 0, 448, 1280, 32, true);
+	double block_size[2] = {32, 32};
+	GE::Shape* b = new GE::Shape(game->getRenderer());
+	GE::Box2D* block = new GE::Box2D(&world, 480, 416, 32, 32, true);
+
+	int32 velocityIterations = 6;
+	int32 positionIterations = 2;
+
+	float timeStep = 1.f / 60.f;
+
 	// START SECTION FOR GAME LOOP //
 
 	while (game->update())
@@ -86,43 +91,16 @@ int main(int argc, char **argv)
 
 		// START SECTION FOR PHYSICS //
 
-		// npc jump condition
+		world.SetGravity(b2Vec2(0, 400 * dt));
+		world.Step(timeStep, velocityIterations, positionIterations);
+		npc->setPosition((double)npcPhysics->getPositionX(), (double)npcPhysics->getPositionY());
+
 		if (isJumping)
 		{
 			npc->setAnimation("jumping", 0.2); // play jump animation
-			npcPhysics->setVelocityY(npcPhysics->getVelocityY() + (npcPhysics->getGravity() * 1.5) * dt); // adding y velocity per seconds
-
-			// limit y velocity of npc
-			if (npcPhysics->getVelocityY() > npcPhysics->getGravity())
-				npcPhysics->setVelocityY(npcPhysics->getGravity()); // limit y velocity to physics gravity
+			if (npcPhysics->getBody()->GetLinearVelocity().y == 0) isJumping = false;
 		}
 
-		for (int i = 0; i < mapPhysics.size(); i++)
-		{
-			collide = npcPhysics->detectAABB(mapPhysics[i]);
-			if (collide == "top")
-			{
-				isJumping = false;
-			}
-			else if (collide == "bottom") // if npc collide with bottom of the shape
-			{
-				isJumping = true;
-			}
-			else if (collide == "fallFromTop") // if npc not collide with anything (fall from shape)
-			{
-				isJumping = true;
-			}
-			else if (collide == "right")
-			{
-				npcPhysics->setVelocityX(0);
-				npcPhysics->setRect("right", mapPhysics[i]->getRect("left") - 1);
-			}
-			else if (collide == "left")
-			{
-				npcPhysics->setVelocityX(0);
-				npcPhysics->setRect("left", mapPhysics[i]->getRect("right") + 1);
-			}
-		}
 		// END SECTION FOR PHYSICS //
 
 		// START SECTION FOR KEYBOARDS //
@@ -131,7 +109,7 @@ int main(int argc, char **argv)
 
 		if (input->getKeyboardPressed("Right") && input->getKeyboardPressed("Left"))
 		{
-			npcPhysics->setVelocityX(0);
+			npcPhysics->moveHorizontal(0);
 		}
 		else if (input->getKeyboardPressed("Right"))
 		{
@@ -140,8 +118,7 @@ int main(int argc, char **argv)
 				npc->setAnimation("go_right", 0.2);
 
 			player_direction = 1;
-			//set npc horizontal velocity
-			npcPhysics->setVelocityX(200);
+			npcPhysics->moveHorizontal(300 * dt);
 		}
 		else if (input->getKeyboardPressed("Left"))
 		{
@@ -150,27 +127,35 @@ int main(int argc, char **argv)
 				npc->setAnimation("go_left", 0.2);
 
 			player_direction = -1;
-			//set npc horizontal velocity
-			npcPhysics->setVelocityX(200 * -1);
+			npcPhysics->moveHorizontal(-300 * dt);
 		}
 		
 		if (input->getKeyboardPressed("Up") && !isJumping)
 		{
 			isJumping = true;
-			npcPhysics->setVelocityY(-npcPhysics->getGravity());
+			float impulse = npcPhysics->getBody()->GetMass() * -1.2;
+			npcPhysics->getBody()->ApplyLinearImpulse(b2Vec2(0, impulse), npcPhysics->getBody()->GetWorldCenter(), true);
 		}
 
-		if (input->getKeyboardReleased("Right") && !isJumping)
+		if (input->getKeyboardReleased("Right"))
 		{
 			//set animation to idle, and velocity to 0
-			npc->setClip(idle_r);
-			npcPhysics->setVelocityX(0);
+			if (!isJumping)
+				npc->setClip(idle_r);
+
+			b2Vec2 vel = npcPhysics->getBody()->GetLinearVelocity();
+			vel.x = 0;
+			npcPhysics->getBody()->SetLinearVelocity(vel);
 		}
 		else if (input->getKeyboardReleased("Left") && !isJumping)
 		{
 			//set animation to idle, and velocity to 0
-			npc->setClip(idle_l);
-			npcPhysics->setVelocityX(0);
+			if (!isJumping)
+				npc->setClip(idle_l);
+
+			b2Vec2 vel = npcPhysics->getBody()->GetLinearVelocity();
+			vel.x = 0;
+			npcPhysics->getBody()->SetLinearVelocity(vel);
 		}
 		else if (input->getKeyboardReleased("Up") && !isJumping)
 		{
@@ -184,6 +169,7 @@ int main(int argc, char **argv)
 
 		map->render(dt);
 		npc->draw(dt); //draw npc
+		b->drawRectangle(block->getPositionX(), block->getPositionY(), block_size, {0, 0, 0, 255});
 
 		// END SECTION FOR DRAW OBJECTS //
 
@@ -197,9 +183,12 @@ int main(int argc, char **argv)
 
 	delete(game);
 	delete(npc);
-	delete(npcPhysics);
 	delete(input);
 	delete(map);
+	delete(npcPhysics);
+	delete(ground);
+	delete(b);
+	delete(block);
 
 	// END SECTION FOR DESTRUCTOR //
 
