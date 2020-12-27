@@ -60,21 +60,18 @@ int main(int argc, char **argv)
 	// map
 	GE::Tilemap* map = new GE::Tilemap(game->getRenderer(), "maps/tes.tmx");
 	map->addAllLayer();
-	std::vector<GE::Physics*> mapPhysics = map->getObjectPhysics();
 
 	// box2d
 	b2Vec2 gravity(0.0, 10.0);
 	b2World world(gravity);
-	GE::Box2D* npcPhysics = new GE::Box2D(&world, 100, 300, 32, 32, false);
-	GE::Box2D* ground = new GE::Box2D(&world, 0, 448, 1280, 32, true);
-	double block_size[2] = {32, 32};
-	GE::Shape* b = new GE::Shape(game->getRenderer());
-	GE::Box2D* block = new GE::Box2D(&world, 480, 416, 32, 32, true);
 
 	int32 velocityIterations = 6;
 	int32 positionIterations = 2;
 
 	float timeStep = 1.f / 60.f;
+
+	GE::Box2D* npcPhysics = new GE::Box2D(&world, 100, 300, 32, 32, false);
+	map->addObjectToWorld(&world, "collision");
 
 	// START SECTION FOR GAME LOOP //
 
@@ -133,8 +130,7 @@ int main(int argc, char **argv)
 		if (input->getKeyboardPressed("Up") && !isJumping)
 		{
 			isJumping = true;
-			float impulse = npcPhysics->getBody()->GetMass() * -1.2;
-			npcPhysics->getBody()->ApplyLinearImpulse(b2Vec2(0, impulse), npcPhysics->getBody()->GetWorldCenter(), true);
+			npcPhysics->applyJump(-1.8);
 		}
 
 		if (input->getKeyboardReleased("Right"))
@@ -143,9 +139,7 @@ int main(int argc, char **argv)
 			if (!isJumping)
 				npc->setClip(idle_r);
 
-			b2Vec2 vel = npcPhysics->getBody()->GetLinearVelocity();
-			vel.x = 0;
-			npcPhysics->getBody()->SetLinearVelocity(vel);
+			npcPhysics->stopMoveHorizontal();
 		}
 		else if (input->getKeyboardReleased("Left") && !isJumping)
 		{
@@ -153,9 +147,7 @@ int main(int argc, char **argv)
 			if (!isJumping)
 				npc->setClip(idle_l);
 
-			b2Vec2 vel = npcPhysics->getBody()->GetLinearVelocity();
-			vel.x = 0;
-			npcPhysics->getBody()->SetLinearVelocity(vel);
+			npcPhysics->stopMoveHorizontal();
 		}
 		else if (input->getKeyboardReleased("Up") && !isJumping)
 		{
@@ -169,7 +161,6 @@ int main(int argc, char **argv)
 
 		map->render(dt);
 		npc->draw(dt); //draw npc
-		b->drawRectangle(block->getPositionX(), block->getPositionY(), block_size, {0, 0, 0, 255});
 
 		// END SECTION FOR DRAW OBJECTS //
 
@@ -186,9 +177,6 @@ int main(int argc, char **argv)
 	delete(input);
 	delete(map);
 	delete(npcPhysics);
-	delete(ground);
-	delete(b);
-	delete(block);
 
 	// END SECTION FOR DESTRUCTOR //
 

@@ -9,7 +9,7 @@
 
 #include "Sprite.h"
 #include "Shape.h"
-#include "Physics.h"
+#include "Box2D.h"
 
 namespace GE
 {
@@ -21,7 +21,6 @@ namespace GE
 		tmx_layer* _layer = NULL;
 		std::vector<GE::Sprite*> _tile_resources;
 		std::vector<GE::Shape*> _object_resources;
-		std::vector<GE::Physics*> _collision_objects;
 	public:
 		Tilemap(SDL_Renderer* renderer, std::string file);
 		~Tilemap();
@@ -32,7 +31,7 @@ namespace GE
 		void addObject(tmx_object_group* object_group);
 		void addAllLayer();
 		void render(double dt);
-		std::vector<GE::Physics*> getObjectPhysics();
+		void addObjectToWorld(b2World* world, std::string object_name);
 	};
 } // namespace GE
 

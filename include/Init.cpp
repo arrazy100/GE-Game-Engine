@@ -121,18 +121,13 @@ void GE::Init::setCamera(GE::Sprite* object)
 {
 	int world_width, world_height;
 	SDL_QueryTexture(_world, NULL, NULL, &world_width, &world_height);
+	
+	_camera.x = object->getPositionX() - _camera.w / 4;
 
 	if (_camera.x <= 0)
 		_camera.x = 0;
-	else if (_camera.x >= (world_width - _camera.w / 3))
-		_camera.x = (world_width - _camera.w / 3);
-
-	if (object->getPositionX() > world_width - _camera.w / 3)
-		object->setPositionX(world_width - _camera.w / 3);
-	else if (object->getPositionX() < _camera.w / 3)
-		object->setPositionX(_camera.w / 3);
-	
-	_camera.x = object->getPositionX() - _camera.w / 3;
+	else if (_camera.x >= 640)
+		_camera.x = 640;
 }
 
 void GE::Init::updateCamera()

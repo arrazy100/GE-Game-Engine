@@ -23,11 +23,6 @@ GE::Tilemap::~Tilemap()
         delete(_object_resources[i]);
     }
     _object_resources.clear();
-    for (int i = 0; i < _collision_objects.size(); i++)
-    {
-        delete(_collision_objects[i]);
-    }
-    _collision_objects.clear();
 }
 
 void GE::Tilemap::setColor(int color)
@@ -88,19 +83,8 @@ void GE::Tilemap::addObject(tmx_object_group* object_group)
     setColor(object_group->color);
     tmx_object* head = object_group->head;
     while (head) {
-        std::string object_name(head->name);
         if (head->visible) {
-            if (object_name == "collision")
-            {
-                rect.x = head->x;
-                rect.y = head->y;
-                rect.w = head->width;
-                rect.h = head->height;
-                GE::Physics* physic = new GE::Physics(true);
-                physic->setBody(rect);
-                _collision_objects.push_back(physic);
-            }
-            else if (head->obj_type == OT_SQUARE) {
+            if (head->obj_type == OT_SQUARE) {
                 /*
                 rect.x = head->x;
                 rect.y = head->y;
@@ -153,7 +137,27 @@ void GE::Tilemap::render(double dt)
     }
 }
 
-std::vector<GE::Physics*> GE::Tilemap::getObjectPhysics()
+void GE::Tilemap::addObjectToWorld(b2World* world, std::string name)
 {
-    return _collision_objects;
+    tmx_layer* layer = _map->ly_head;
+    while (layer)
+    {
+        if (layer->visible)
+        {
+            if (layer->type == L_OBJGR)
+            {
+                tmx_object_group* object_group = layer->content.objgr;
+                tmx_object* head = object_group->head;
+                while (head) {
+                    std::string object_name(head->name);
+                    if (object_name == name)
+                    {
+                        GE::Box2D* object = new GE::Box2D(world, head->x, head->y, head->width, head->height, true);
+                    }
+                    head = head->next;
+                }
+            }
+        }
+        layer = layer->next;
+    }
 }

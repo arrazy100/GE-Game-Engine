@@ -4,7 +4,7 @@ GE::Box2D::Box2D(b2World* world, float x, float y, float w, float h, bool is_sta
 {
     if (is_static)
     {
-        _body_def.position.Set(pixelToMeter(x), pixelToMeter(y));
+        _body_def.position.Set(pixelToMeter(x + w / 2), pixelToMeter(y));
         _body = world->CreateBody(&_body_def);
 
         b2PolygonShape polygon_shape;
@@ -16,7 +16,7 @@ GE::Box2D::Box2D(b2World* world, float x, float y, float w, float h, bool is_sta
     else if (!is_static)
     {
         _body_def.type = b2_dynamicBody;
-        _body_def.position.Set(pixelToMeter(x), pixelToMeter(y));
+        _body_def.position.Set(pixelToMeter(x + w / 2), pixelToMeter(y));
         _body = world->CreateBody(&_body_def);
 
         b2PolygonShape polygon_shape;
@@ -31,7 +31,8 @@ GE::Box2D::Box2D(b2World* world, float x, float y, float w, float h, bool is_sta
         _body->CreateFixture(_fixture_def);
         _body->SetFixedRotation(true);
     }
-    
+    _w = w;
+    _h = h;
 }
 
 GE::Box2D::~Box2D()
@@ -48,7 +49,7 @@ b2Body* GE::Box2D::getBody()
 
 float GE::Box2D::getPositionX()
 {
-    return meterToPixel(_body->GetPosition().x);
+    return meterToPixel(_body->GetPosition().x) - _w / 2;
 }
 
 float GE::Box2D::getPositionY()
@@ -75,9 +76,17 @@ void GE::Box2D::moveVertical(float velocity)
     _body->SetLinearVelocity(b2Vec2(0, velocity));
 }
 
-void GE::Box2D::move(b2Vec2 velocity)
+void GE::Box2D::stopMoveHorizontal()
 {
-    _body->SetLinearVelocity(velocity);
+    b2Vec2 vel = _body->GetLinearVelocity();
+    vel.x = 0;
+    _body->SetLinearVelocity(vel);
+}
+
+void GE::Box2D::applyJump(float velocity)
+{
+    float impulse = _body->GetMass() * velocity;
+	_body->ApplyLinearImpulse(b2Vec2(0, impulse), _body->GetWorldCenter(), true);
 }
 
 float GE::Box2D::pixelToMeter(float pixel)

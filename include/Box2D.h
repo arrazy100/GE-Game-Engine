@@ -15,6 +15,8 @@ namespace GE
 		b2Body* _body = NULL;
 		b2FixtureDef* _fixture_def = NULL;
 		const float PPM = 32.f;
+		float _w = 0;
+		float _h = 0;
 
 	public:
 		Box2D(b2World* world, float x, float y, float w, float h, bool is_static);
@@ -25,7 +27,8 @@ namespace GE
 		void setPosition(float x, float y);
 		void moveHorizontal(float velocity);
 		void moveVertical(float velocity);
-		void move(b2Vec2 velocity);
+		void stopMoveHorizontal();
+		void applyJump(float velocity);
 		float pixelToMeter(float pixel);
 		float meterToPixel(float meter);
 	};

@@ -25,6 +25,7 @@ GE::Text::~Text()
     TTF_CloseFont(_font);
     SDL_DestroyTexture(_texture);
     SDL_FreeSurface(_surface);
+    _font = NULL;
     _texture = NULL;
     _surface = NULL;
     _renderer = NULL;
