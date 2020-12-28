@@ -31,7 +31,7 @@ namespace GE
 		void addObject(tmx_object_group* object_group);
 		void addAllLayer();
 		void render(double dt);
-		void addObjectToWorld(b2World* world, std::string object_name);
+		void addObjectToWorld(b2World* world, std::string object_name, bool is_sensor);
 	};
 } // namespace GE
 

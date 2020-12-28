@@ -4,6 +4,7 @@
 #include <string>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
+#include <box2d/box2d.h>
 
 #include "Sprite.h"
 
@@ -20,6 +21,10 @@ namespace GE
 		Uint32 _lastFrameTimeElapsed = 0;
 		Uint64 _start = 0;
 		Uint64 _end = 0;
+		b2World* _box2d_world = NULL;
+		float _box2d_timestep = 1.f / 60.f;
+		int32 _velocity_iterations = 6;
+		int32 _position_iterations = 2;
 
 	public:
 		Init(const int screen_width, const int screen_height);
@@ -32,6 +37,10 @@ namespace GE
 		void initCamera(int width, int height);
 		void setCamera(GE::Sprite* object);
 		void updateCamera();
+		int getCameraX();
+		void initBox2DWorld(b2Vec2 gravity);
+		void updateBox2DWorld(double dt);
+		b2World* getBox2DWorld();
 	};
 } // namespace GE
 

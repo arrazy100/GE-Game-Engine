@@ -487,6 +487,12 @@ build include/test: phony include/CMakeFiles/test.util
 # Order-only phony target for GameEngineLibrary
 
 build cmake_object_order_depends_target_GameEngineLibrary: phony
+build include/CMakeFiles/GameEngineLibrary.dir/Box2D.cpp.o: CXX_COMPILER__GameEngineLibrary ../include/Box2D.cpp || cmake_object_order_depends_target_GameEngineLibrary
+  DEP_FILE = include/CMakeFiles/GameEngineLibrary.dir/Box2D.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -isystem /usr/include/SDL2 -isystem /usr/local/include
+  OBJECT_DIR = include/CMakeFiles/GameEngineLibrary.dir
+  OBJECT_FILE_DIR = include/CMakeFiles/GameEngineLibrary.dir
 build include/CMakeFiles/GameEngineLibrary.dir/Init.cpp.o: CXX_COMPILER__GameEngineLibrary ../include/Init.cpp || cmake_object_order_depends_target_GameEngineLibrary
   DEP_FILE = include/CMakeFiles/GameEngineLibrary.dir/Init.cpp.o.d
   FLAGS = -g
@@ -511,6 +517,12 @@ build include/CMakeFiles/GameEngineLibrary.dir/Shape.cpp.o: CXX_COMPILER__GameEn
   INCLUDES = -isystem /usr/include/SDL2 -isystem /usr/local/include
   OBJECT_DIR = include/CMakeFiles/GameEngineLibrary.dir
   OBJECT_FILE_DIR = include/CMakeFiles/GameEngineLibrary.dir
+build include/CMakeFiles/GameEngineLibrary.dir/Sound.cpp.o: CXX_COMPILER__GameEngineLibrary ../include/Sound.cpp || cmake_object_order_depends_target_GameEngineLibrary
+  DEP_FILE = include/CMakeFiles/GameEngineLibrary.dir/Sound.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -isystem /usr/include/SDL2 -isystem /usr/local/include
+  OBJECT_DIR = include/CMakeFiles/GameEngineLibrary.dir
+  OBJECT_FILE_DIR = include/CMakeFiles/GameEngineLibrary.dir
 build include/CMakeFiles/GameEngineLibrary.dir/Sprite.cpp.o: CXX_COMPILER__GameEngineLibrary ../include/Sprite.cpp || cmake_object_order_depends_target_GameEngineLibrary
   DEP_FILE = include/CMakeFiles/GameEngineLibrary.dir/Sprite.cpp.o.d
   FLAGS = -g
@@ -529,12 +541,6 @@ build include/CMakeFiles/GameEngineLibrary.dir/Tilemap.cpp.o: CXX_COMPILER__Game
   INCLUDES = -isystem /usr/include/SDL2 -isystem /usr/local/include
   OBJECT_DIR = include/CMakeFiles/GameEngineLibrary.dir
   OBJECT_FILE_DIR = include/CMakeFiles/GameEngineLibrary.dir
-build include/CMakeFiles/GameEngineLibrary.dir/Box2D.cpp.o: CXX_COMPILER__GameEngineLibrary ../include/Box2D.cpp || cmake_object_order_depends_target_GameEngineLibrary
-  DEP_FILE = include/CMakeFiles/GameEngineLibrary.dir/Box2D.cpp.o.d
-  FLAGS = -g
-  INCLUDES = -isystem /usr/include/SDL2 -isystem /usr/local/include
-  OBJECT_DIR = include/CMakeFiles/GameEngineLibrary.dir
-  OBJECT_FILE_DIR = include/CMakeFiles/GameEngineLibrary.dir
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target GameEngineLibrary
@@ -543,7 +549,7 @@ build include/CMakeFiles/GameEngineLibrary.dir/Box2D.cpp.o: CXX_COMPILER__GameEn
 #############################################
 # Link the static library include/libGameEngineLibrary.a
 
-build include/libGameEngineLibrary.a: CXX_STATIC_LIBRARY_LINKER__GameEngineLibrary include/CMakeFiles/GameEngineLibrary.dir/Init.cpp.o include/CMakeFiles/GameEngineLibrary.dir/Input.cpp.o include/CMakeFiles/GameEngineLibrary.dir/Physics.cpp.o include/CMakeFiles/GameEngineLibrary.dir/Shape.cpp.o include/CMakeFiles/GameEngineLibrary.dir/Sprite.cpp.o include/CMakeFiles/GameEngineLibrary.dir/Text.cpp.o include/CMakeFiles/GameEngineLibrary.dir/Tilemap.cpp.o include/CMakeFiles/GameEngineLibrary.dir/Box2D.cpp.o
+build include/libGameEngineLibrary.a: CXX_STATIC_LIBRARY_LINKER__GameEngineLibrary include/CMakeFiles/GameEngineLibrary.dir/Box2D.cpp.o include/CMakeFiles/GameEngineLibrary.dir/Init.cpp.o include/CMakeFiles/GameEngineLibrary.dir/Input.cpp.o include/CMakeFiles/GameEngineLibrary.dir/Physics.cpp.o include/CMakeFiles/GameEngineLibrary.dir/Shape.cpp.o include/CMakeFiles/GameEngineLibrary.dir/Sound.cpp.o include/CMakeFiles/GameEngineLibrary.dir/Sprite.cpp.o include/CMakeFiles/GameEngineLibrary.dir/Text.cpp.o include/CMakeFiles/GameEngineLibrary.dir/Tilemap.cpp.o
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = include/CMakeFiles/GameEngineLibrary.dir
   POST_BUILD = :

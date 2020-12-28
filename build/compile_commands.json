@@ -7,6 +7,12 @@
 
 {
   "directory": "/home/afar0308/Documents/Game Engine V2/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -isystem /usr/include/SDL2 -isystem /usr/local/include  -g   -o include/CMakeFiles/GameEngineLibrary.dir/Box2D.cpp.o -c \"/home/afar0308/Documents/Game Engine V2/include/Box2D.cpp\"",
+  "file": "/home/afar0308/Documents/Game Engine V2/include/Box2D.cpp"
+},
+
+{
+  "directory": "/home/afar0308/Documents/Game Engine V2/build",
   "command": "/usr/bin/x86_64-linux-gnu-g++-7   -isystem /usr/include/SDL2 -isystem /usr/local/include  -g   -o include/CMakeFiles/GameEngineLibrary.dir/Init.cpp.o -c \"/home/afar0308/Documents/Game Engine V2/include/Init.cpp\"",
   "file": "/home/afar0308/Documents/Game Engine V2/include/Init.cpp"
 },
@@ -31,6 +37,12 @@
 
 {
   "directory": "/home/afar0308/Documents/Game Engine V2/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -isystem /usr/include/SDL2 -isystem /usr/local/include  -g   -o include/CMakeFiles/GameEngineLibrary.dir/Sound.cpp.o -c \"/home/afar0308/Documents/Game Engine V2/include/Sound.cpp\"",
+  "file": "/home/afar0308/Documents/Game Engine V2/include/Sound.cpp"
+},
+
+{
+  "directory": "/home/afar0308/Documents/Game Engine V2/build",
   "command": "/usr/bin/x86_64-linux-gnu-g++-7   -isystem /usr/include/SDL2 -isystem /usr/local/include  -g   -o include/CMakeFiles/GameEngineLibrary.dir/Sprite.cpp.o -c \"/home/afar0308/Documents/Game Engine V2/include/Sprite.cpp\"",
   "file": "/home/afar0308/Documents/Game Engine V2/include/Sprite.cpp"
 },
@@ -45,11 +57,5 @@
   "directory": "/home/afar0308/Documents/Game Engine V2/build",
   "command": "/usr/bin/x86_64-linux-gnu-g++-7   -isystem /usr/include/SDL2 -isystem /usr/local/include  -g   -o include/CMakeFiles/GameEngineLibrary.dir/Tilemap.cpp.o -c \"/home/afar0308/Documents/Game Engine V2/include/Tilemap.cpp\"",
   "file": "/home/afar0308/Documents/Game Engine V2/include/Tilemap.cpp"
-},
-
-{
-  "directory": "/home/afar0308/Documents/Game Engine V2/build",
-  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -isystem /usr/include/SDL2 -isystem /usr/local/include  -g   -o include/CMakeFiles/GameEngineLibrary.dir/Box2D.cpp.o -c \"/home/afar0308/Documents/Game Engine V2/include/Box2D.cpp\"",
-  "file": "/home/afar0308/Documents/Game Engine V2/include/Box2D.cpp"
 }
 ]

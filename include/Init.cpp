@@ -1,5 +1,10 @@
 #include "Init.h"
 
+struct UserData
+{
+    std::string name;
+};
+
 /**
  * @brief
  * @param screen_width set window width
@@ -54,6 +59,17 @@ GE::Init::~Init()
 	//quit system
 	SDL_Quit();
 	TTF_Quit();
+	for (b2Body* b = _box2d_world->GetBodyList(); b; b = b->GetNext())
+	{
+		for (b2Fixture* f = b->GetFixtureList(); f; f = f->GetNext())
+		{
+			delete(reinterpret_cast<UserData*>(f->GetUserData().pointer));
+		}
+		delete(reinterpret_cast<UserData*>(b->GetUserData().pointer));
+		_box2d_world->DestroyBody(b);
+	}
+	delete(_box2d_world);
+	_box2d_world = NULL;
 }
 
 /**
@@ -134,4 +150,25 @@ void GE::Init::updateCamera()
 {
 	SDL_SetRenderTarget(_renderer, NULL);
 	SDL_RenderCopy(_renderer, _world, &_camera, NULL);
+}
+
+int GE::Init::getCameraX()
+{
+	return _camera.x;
+}
+
+void GE::Init::initBox2DWorld(b2Vec2 gravity)
+{
+	_box2d_world = new b2World(gravity);
+}
+
+void GE::Init::updateBox2DWorld(double dt)
+{
+	_box2d_world->SetGravity(b2Vec2(0, 400 * dt));
+	_box2d_world->Step(_box2d_timestep, _velocity_iterations, _position_iterations);
+}
+
+b2World* GE::Init::getBox2DWorld()
+{
+	return _box2d_world;
 }
