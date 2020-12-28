@@ -1,5 +1,10 @@
 #include "Box2D.h"
 
+struct UserData
+{
+    std::string name;
+};
+
 GE::Box2D::Box2D(b2World* world, float x, float y, float w, float h, bool is_static)
 {
     if (is_static)
@@ -27,8 +32,19 @@ GE::Box2D::Box2D(b2World* world, float x, float y, float w, float h, bool is_sta
         _fixture_def->density = 1.0f;
         _fixture_def->friction = 0.f;
         _fixture_def->restitution = 0.0f;
-
         _body->CreateFixture(_fixture_def);
+        
+        polygon_shape.SetAsBox(pixelToMeter(w), 0.1, b2Vec2(0, pixelToMeter(h) / 2), 0);
+
+        UserData* data = new UserData;
+        data->name = "foot";
+
+        _fixture_def->shape = &polygon_shape;
+        _fixture_def->isSensor = true;
+        _fixture_def->userData.pointer = reinterpret_cast<uintptr_t>(data);
+        
+        _body->CreateFixture(_fixture_def);
+
         _body->SetFixedRotation(true);
     }
     _w = w;
@@ -97,4 +113,31 @@ float GE::Box2D::pixelToMeter(float pixel)
 float GE::Box2D::meterToPixel(float meter)
 {
     return round(meter * PPM);
+}
+
+void GE::Box2DListener::BeginContact(b2Contact* contact)
+{
+    UserData* A = reinterpret_cast<UserData*>(contact->GetFixtureA()->GetUserData().pointer);
+    if (A && A->name == "foot")
+        _touch_foot++;
+
+   UserData* B = reinterpret_cast<UserData*>(contact->GetFixtureB()->GetUserData().pointer);
+    if (B && B->name == "foot")
+        _touch_foot++;
+}
+
+void GE::Box2DListener::EndContact(b2Contact* contact)
+{
+    UserData* A = reinterpret_cast<UserData*>(contact->GetFixtureA()->GetUserData().pointer);
+    if (A && A->name == "foot")
+        _touch_foot--;
+
+   UserData* B = reinterpret_cast<UserData*>(contact->GetFixtureB()->GetUserData().pointer);
+    if (B && B->name == "foot")
+        _touch_foot--;
+}
+
+int GE::Box2DListener::getTouchedFoot()
+{
+    return _touch_foot;
 }

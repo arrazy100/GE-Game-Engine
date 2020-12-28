@@ -8,6 +8,11 @@
 #include "include/Tilemap.h"
 #include "include/Box2D.h"
 
+struct UserData
+{
+    std::string name;
+};
+
 /**
  * @brief
  * @param argc
@@ -63,15 +68,17 @@ int main(int argc, char **argv)
 
 	// box2d
 	b2Vec2 gravity(0.0, 10.0);
-	b2World world(gravity);
+	b2World* world = new b2World(gravity);
 
 	int32 velocityIterations = 6;
 	int32 positionIterations = 2;
 
 	float timeStep = 1.f / 60.f;
 
-	GE::Box2D* npcPhysics = new GE::Box2D(&world, 100, 300, 32, 32, false);
-	map->addObjectToWorld(&world, "collision");
+	GE::Box2D* npcPhysics = new GE::Box2D(world, 100, 300, 32, 32, false);
+	map->addObjectToWorld(world, "collision");
+	GE::Box2DListener listener;
+	world->SetContactListener(&listener);
 
 	// START SECTION FOR GAME LOOP //
 
@@ -88,14 +95,14 @@ int main(int argc, char **argv)
 
 		// START SECTION FOR PHYSICS //
 
-		world.SetGravity(b2Vec2(0, 400 * dt));
-		world.Step(timeStep, velocityIterations, positionIterations);
+		world->SetGravity(b2Vec2(0, 400 * dt));
+		world->Step(timeStep, velocityIterations, positionIterations);
 		npc->setPosition((double)npcPhysics->getPositionX(), (double)npcPhysics->getPositionY());
 
 		if (isJumping)
 		{
 			npc->setAnimation("jumping", 0.2); // play jump animation
-			if (npcPhysics->getBody()->GetLinearVelocity().y == 0) isJumping = false;
+			if (listener.getTouchedFoot() > 0 && npcPhysics->getBody()->GetLinearVelocity().y == 0) isJumping = false;
 		}
 
 		// END SECTION FOR PHYSICS //
@@ -153,6 +160,7 @@ int main(int argc, char **argv)
 		{
 			if (player_direction) npc->setClip(idle_r);
 			else npc->setClip(idle_l);
+			npcPhysics->stopMoveHorizontal();
 		}
 
 		// END SECTION FOR KEYBOARDS //
@@ -177,6 +185,7 @@ int main(int argc, char **argv)
 	delete(input);
 	delete(map);
 	delete(npcPhysics);
+	delete(world);
 
 	// END SECTION FOR DESTRUCTOR //
 
