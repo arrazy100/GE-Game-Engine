@@ -152,7 +152,7 @@ void GE::Tilemap::addObjectToWorld(b2World* world, std::string name, bool is_sen
                     std::string object_name(head->name);
                     if (object_name == name)
                     {
-                        GE::Box2D* object = new GE::Box2D(world, head->x, head->y, head->width, head->height, true, is_sensor, object_name);
+                        GE::Box2D* box2d = new GE::Box2D(world, head->x, head->y, head->width, head->height, true, is_sensor, object_name);
                     }
                     head = head->next;
                 }

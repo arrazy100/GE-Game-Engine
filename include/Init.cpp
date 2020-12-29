@@ -59,15 +59,6 @@ GE::Init::~Init()
 	//quit system
 	SDL_Quit();
 	TTF_Quit();
-	for (b2Body* b = _box2d_world->GetBodyList(); b; b = b->GetNext())
-	{
-		for (b2Fixture* f = b->GetFixtureList(); f; f = f->GetNext())
-		{
-			delete(reinterpret_cast<UserData*>(f->GetUserData().pointer));
-		}
-		delete(reinterpret_cast<UserData*>(b->GetUserData().pointer));
-		_box2d_world->DestroyBody(b);
-	}
 	delete(_box2d_world);
 	_box2d_world = NULL;
 }

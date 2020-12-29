@@ -82,6 +82,12 @@ GE::Box2D::Box2D(b2World* world, float x, float y, float w, float h, bool is_sta
 
 GE::Box2D::~Box2D()
 {
+    for (b2Fixture* f = _body->GetFixtureList(); f; f = f->GetNext())
+    {
+        delete(reinterpret_cast<UserData*>(f->GetUserData().pointer));
+    }
+    delete(reinterpret_cast<UserData*>(_body->GetUserData().pointer));
+    _world->DestroyBody(_body);
     _world = NULL;
     _body = NULL;
     delete(_fixture_def);
@@ -157,18 +163,6 @@ void GE::Box2DListener::BeginContact(b2Contact* contact)
     else if (A && A->name == "left")
         _touch_left++;
 
-    UserData* AA = reinterpret_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData().pointer);
-    UserData* BB = reinterpret_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData().pointer);
-
-    if (AA && AA->name == "coin" && BB && BB->name == "npc")
-    {
-        _coin++;
-    }
-    else if (AA && AA->name == "npc" && BB && BB->name == "coin")
-    {
-        _coin++;
-    }
-
     UserData* B = reinterpret_cast<UserData*>(contact->GetFixtureB()->GetUserData().pointer);
     if (B && B->name == "top")
         _touch_top++;
@@ -178,6 +172,20 @@ void GE::Box2DListener::BeginContact(b2Contact* contact)
         _touch_right++;
     else if (B && B->name == "left")
         _touch_left++;
+
+    UserData* AA = reinterpret_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData().pointer);
+    UserData* BB = reinterpret_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData().pointer);
+
+    if (AA && AA->name == "coin" && BB && BB->name == "npc")
+    {
+        _body_to_remove.push_back(contact->GetFixtureA()->GetBody());
+        _coin++;
+    }
+    else if (AA && AA->name == "npc" && BB && BB->name == "coin")
+    {
+        _body_to_remove.push_back(contact->GetFixtureB()->GetBody());
+        _coin++;
+    }
 }
 
 void GE::Box2DListener::EndContact(b2Contact* contact)
@@ -226,4 +234,9 @@ int GE::Box2DListener::getTouchedLeft()
 int GE::Box2DListener::getCoin()
 {
     return _coin;
+}
+
+std::vector<b2Body*> GE::Box2DListener::getBodyToRemove()
+{
+    return _body_to_remove;
 }

@@ -90,6 +90,7 @@ int main(int argc, char **argv)
 		// START SECTION FOR PHYSICS //
 
 		game->updateBox2DWorld(dt);
+		
 		npc->setPosition((double)npcPhysics->getPositionX(), (double)npcPhysics->getPositionY());
 
 		if (isJumping)
@@ -163,9 +164,6 @@ int main(int argc, char **argv)
 
 		map->render(dt);
 		npc->draw(dt); //draw npc
-		std::string t = std::to_string(listener.getCoin());
-		text->changeText(t, false);
-		text->draw(game->getCameraX() + 0, 0, dt);
 
 		// END SECTION FOR DRAW OBJECTS //
 
@@ -178,11 +176,11 @@ int main(int argc, char **argv)
 	// DESTRUCTOR //
 
 	delete(text);
-	delete(game);
-	delete(npcPhysics);
 	delete(map);
+	delete(npcPhysics);
 	delete(npc);
 	delete(input);
+	delete(game);
 
 	// END SECTION FOR DESTRUCTOR //
 
