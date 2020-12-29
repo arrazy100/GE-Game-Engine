@@ -172,20 +172,6 @@ void GE::Box2DListener::BeginContact(b2Contact* contact)
         _touch_right++;
     else if (B && B->name == "left")
         _touch_left++;
-
-    UserData* AA = reinterpret_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData().pointer);
-    UserData* BB = reinterpret_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData().pointer);
-
-    if (AA && AA->name == "coin" && BB && BB->name == "npc")
-    {
-        _body_to_remove.push_back(contact->GetFixtureA()->GetBody());
-        _coin++;
-    }
-    else if (AA && AA->name == "npc" && BB && BB->name == "coin")
-    {
-        _body_to_remove.push_back(contact->GetFixtureB()->GetBody());
-        _coin++;
-    }
 }
 
 void GE::Box2DListener::EndContact(b2Contact* contact)
@@ -229,14 +215,4 @@ int GE::Box2DListener::getTouchedRight()
 int GE::Box2DListener::getTouchedLeft()
 {
     return _touch_left;
-}
-
-int GE::Box2DListener::getCoin()
-{
-    return _coin;
-}
-
-std::vector<b2Body*> GE::Box2DListener::getBodyToRemove()
-{
-    return _body_to_remove;
 }

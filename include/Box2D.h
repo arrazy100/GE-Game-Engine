@@ -39,8 +39,6 @@ namespace GE
 			int _touch_bottom = 0;
 			int _touch_right = 0;
 			int _touch_left = 0;
-			int _coin = 0;
-			std::vector<b2Body*> _body_to_remove;
 		public:
 			void BeginContact(b2Contact* contact);
 			void EndContact(b2Contact* contact);
@@ -48,8 +46,6 @@ namespace GE
 			int getTouchedBottom();
 			int getTouchedRight();
 			int getTouchedLeft();
-			int getCoin();
-			std::vector<b2Body*> getBodyToRemove();
 	};
 } // namespace GE
 

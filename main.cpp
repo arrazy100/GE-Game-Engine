@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <string>
 
 #include "include/Box2D.h"
@@ -7,6 +8,11 @@
 #include "include/Sprite.h"
 #include "include/Text.h"
 #include "include/Tilemap.h"
+
+struct UserData
+{
+    std::string name;
+};
 
 /**
  * @brief
@@ -61,6 +67,7 @@ int main(int argc, char **argv)
 	double dt;
 	bool isJumping = false;
 	int player_direction = 1;
+	int coin = 0;
 
 	// camera scrolling
 	game->initCamera(1280, 480);
@@ -90,6 +97,44 @@ int main(int argc, char **argv)
 		// START SECTION FOR PHYSICS //
 
 		game->updateBox2DWorld(dt);
+		
+		for (b2Contact* c = game->getBox2DWorld()->GetContactList(); c; c = c->GetNext())
+		{
+			if (c && c->IsTouching())
+			{
+				UserData* AA = reinterpret_cast<UserData*>(c->GetFixtureA()->GetBody()->GetUserData().pointer);
+				UserData* BB = reinterpret_cast<UserData*>(c->GetFixtureB()->GetBody()->GetUserData().pointer);
+
+				if (AA && AA->name == "coin" && BB && BB->name == "npc")
+				{
+					b2Body* body = c->GetFixtureA()->GetBody();
+					for (auto it = map->getRemovableObjects().begin(); it != map->getRemovableObjects().end();)
+					{
+						if ((*it)->getBody() == body)
+						{
+							coin++;
+							delete (*it);
+							map->getRemovableObjects().erase(it);
+						}
+						else ++it;
+					}
+				}
+				else if (AA && AA->name == "npc" && BB && BB->name == "coin")
+				{
+					b2Body* body = c->GetFixtureB()->GetBody();
+					for (auto it = map->getRemovableObjects().begin(); it != map->getRemovableObjects().end();)
+					{
+						if ((*it)->getBody() == body)
+						{
+							coin++;
+							delete (*it);
+							map->getRemovableObjects().erase(it);
+						}
+						else ++it;
+					}
+				}
+			}
+		}
 		
 		npc->setPosition((double)npcPhysics->getPositionX(), (double)npcPhysics->getPositionY());
 
@@ -164,6 +209,8 @@ int main(int argc, char **argv)
 
 		map->render(dt);
 		npc->draw(dt); //draw npc
+		text->changeText(std::to_string(coin), false);
+		text->draw(game->getCameraX() + 0, 0, dt);
 
 		// END SECTION FOR DRAW OBJECTS //
 

@@ -21,6 +21,7 @@ namespace GE
 		tmx_layer* _layer = NULL;
 		std::vector<GE::Sprite*> _tile_resources;
 		std::vector<GE::Shape*> _object_resources;
+		std::vector<GE::Box2D*> _removable_objects;
 	public:
 		Tilemap(SDL_Renderer* renderer, std::string file);
 		~Tilemap();
@@ -32,6 +33,7 @@ namespace GE
 		void addAllLayer();
 		void render(double dt);
 		void addObjectToWorld(b2World* world, std::string object_name, bool is_sensor);
+		std::vector<GE::Box2D*> getRemovableObjects();
 	};
 } // namespace GE
 
