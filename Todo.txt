@@ -1,1 +1,6 @@
-Removable object box2d
+Removable for enemy-like object
+Keyboard, Mouse, Touch screen implementation
+Sound implementation
+Game state implementation
+Testing platformer game making
+Android Porting
