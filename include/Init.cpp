@@ -77,13 +77,17 @@ bool GE::Init::update()
 			return false;
 		}
 	}
+	return true;
+}
+
+void GE::Init::render()
+{
 	//render color and clearing
 	if (_world)
 		SDL_SetRenderTarget(_renderer, _world);
 	SDL_SetRenderDrawColor(_renderer, 255, 255, 255, 255); //set screen background color
 	SDL_RenderClear(_renderer); //refresh renderer
 	SDL_SetRenderDrawBlendMode(_renderer, SDL_BLENDMODE_BLEND);
-	return true;
 }
 
 /**

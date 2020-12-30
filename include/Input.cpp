@@ -22,14 +22,17 @@ bool GE::Input::getKeyboardPressed(std::string key)
         _last_key = key;
         return true;
     }
-
+    
     return false;
 }
 
 bool GE::Input::getKeyboardReleased(std::string key)
 {
     SDL_Scancode key_release = SDL_GetScancodeFromName(key.c_str());
-    if (!_keyboard_state[key_release] && _last_key == key) return true;
-    
+    if (!_keyboard_state[key_release] && _last_key == key)
+    {
+        return true;
+    }
+
     return false;
 }

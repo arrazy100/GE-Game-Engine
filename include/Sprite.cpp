@@ -21,6 +21,7 @@ GE::Sprite::~Sprite()
 	SDL_DestroyTexture(_texture);
 	_texture = NULL;
 	_renderer = NULL;
+	_animation.clear();
 }
 
 //load sprite from image

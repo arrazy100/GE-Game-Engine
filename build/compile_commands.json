@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/afar0308/Documents/Game Engine V2/build",
-  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -isystem /usr/include/SDL2 -isystem /usr/local/include  -g   -o CMakeFiles/GameEngineExample.dir/main.cpp.o -c \"/home/afar0308/Documents/Game Engine V2/main.cpp\"",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -isystem /usr/include/SDL2 -isystem /usr/local/include  -g   -O0 -o CMakeFiles/GameEngineExample.dir/main.cpp.o -c \"/home/afar0308/Documents/Game Engine V2/main.cpp\"",
   "file": "/home/afar0308/Documents/Game Engine V2/main.cpp"
 },
 

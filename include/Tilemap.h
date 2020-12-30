@@ -3,6 +3,7 @@
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#include <memory>
 #include <string>
 #include <tmx.h>
 #include <vector>
@@ -19,9 +20,9 @@ namespace GE
 		SDL_Renderer* _renderer = NULL;
 		tmx_map* _map = NULL;
 		tmx_layer* _layer = NULL;
-		std::vector<GE::Sprite*> _tile_resources;
-		std::vector<GE::Shape*> _object_resources;
-		std::vector<GE::Box2D*> _removable_objects;
+		std::vector<GE::Sprite*> _tiles;
+		std::vector<GE::Box2D*> _objects;
+		std::vector<std::pair<std::shared_ptr<GE::Sprite>, std::shared_ptr<GE::Box2D>>> _removable_objects;
 	public:
 		Tilemap(SDL_Renderer* renderer, std::string file);
 		~Tilemap();
@@ -29,11 +30,14 @@ namespace GE
 		void addImageLayer(tmx_image* image);
 		void addTile(GE::Sprite* tile);
 		void addLayer(tmx_layer* layer);
+		void addLayer(b2World* world, tmx_layer* layer);
 		void addObject(tmx_object_group* object_group);
 		void addAllLayer();
 		void render(double dt);
-		void addObjectToWorld(b2World* world, std::string object_name, bool is_sensor);
-		std::vector<GE::Box2D*> getRemovableObjects();
+		void addNormalLayer(std::string layer_name);
+		void addPhysicsFromObject(b2World* world, std::string object_name);
+		void addRemovableObjectToWorld(b2World* world, std::string layer_name);
+		std::vector<std::pair<std::shared_ptr<GE::Sprite>, std::shared_ptr<GE::Box2D>>>& getRemovableObjects();
 	};
 } // namespace GE
 

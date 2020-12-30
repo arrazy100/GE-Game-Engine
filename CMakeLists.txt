@@ -6,6 +6,7 @@ enable_testing()
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/include)
 add_executable(GameEngineExample main.cpp)
+target_compile_options(GameEngineExample PRIVATE -O0)
 target_link_libraries(GameEngineExample GameEngineLibrary)
 set_target_properties(GameEngineExample PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 

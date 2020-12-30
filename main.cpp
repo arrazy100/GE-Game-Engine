@@ -74,9 +74,9 @@ int main(int argc, char **argv)
 
 	// map
 	GE::Tilemap* map = new GE::Tilemap(game->getRenderer(), "maps/tes.tmx");
-	map->addAllLayer();
-	map->addObjectToWorld(game->getBox2DWorld(), "collision", false);
-	map->addObjectToWorld(game->getBox2DWorld(), "coin", true);
+	map->addNormalLayer("main");
+	map->addPhysicsFromObject(game->getBox2DWorld(), "collision");
+	map->addRemovableObjectToWorld(game->getBox2DWorld(), "coin");
 
 	// text
 	GE::Text* text = new GE::Text(game->getRenderer(), "", "font/agane_roman.ttf", 14, {0, 0, 0, 255}, TTF_STYLE_NORMAL, 640);
@@ -110,10 +110,9 @@ int main(int argc, char **argv)
 					b2Body* body = c->GetFixtureA()->GetBody();
 					for (auto it = map->getRemovableObjects().begin(); it != map->getRemovableObjects().end();)
 					{
-						if ((*it)->getBody() == body)
+						if (it->second->getBody() == body)
 						{
 							coin++;
-							delete (*it);
 							map->getRemovableObjects().erase(it);
 						}
 						else ++it;
@@ -124,10 +123,9 @@ int main(int argc, char **argv)
 					b2Body* body = c->GetFixtureB()->GetBody();
 					for (auto it = map->getRemovableObjects().begin(); it != map->getRemovableObjects().end();)
 					{
-						if ((*it)->getBody() == body)
+						if (it->second->getBody() == body)
 						{
 							coin++;
-							delete (*it);
 							map->getRemovableObjects().erase(it);
 						}
 						else ++it;
@@ -141,8 +139,7 @@ int main(int argc, char **argv)
 		if (isJumping)
 		{
 			npc->setAnimation("jumping", 0.2); // play jump animation
-			bool on_ground = listener.getTouchedBottom() > 0;
-			if (on_ground && npcPhysics->getBody()->GetLinearVelocity().y == 0) isJumping = false;
+			if (listener.getTouchedBottom() > 0 && npcPhysics->getBody()->GetLinearVelocity().y == 0) isJumping = false;
 		}
 
 		// END SECTION FOR PHYSICS //
@@ -207,6 +204,7 @@ int main(int argc, char **argv)
 
 		// START SECTION FOR DRAW OBJECTS //
 
+		game->render();
 		map->render(dt);
 		npc->draw(dt); //draw npc
 		text->changeText(std::to_string(coin), false);

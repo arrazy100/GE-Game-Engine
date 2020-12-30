@@ -69,7 +69,7 @@ build package: phony CMakeFiles/package.util
 build cmake_object_order_depends_target_GameEngineExample: phony || cmake_object_order_depends_target_GameEngineLibrary
 build CMakeFiles/GameEngineExample.dir/main.cpp.o: CXX_COMPILER__GameEngineExample ../main.cpp || cmake_object_order_depends_target_GameEngineExample
   DEP_FILE = CMakeFiles/GameEngineExample.dir/main.cpp.o.d
-  FLAGS = -g
+  FLAGS = -g   -O0
   INCLUDES = -isystem /usr/include/SDL2 -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/GameEngineExample.dir
   OBJECT_FILE_DIR = CMakeFiles/GameEngineExample.dir

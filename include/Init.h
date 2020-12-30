@@ -30,6 +30,7 @@ namespace GE
 		Init(const int screen_width, const int screen_height);
 		~Init();
 		bool update();
+		void render();
 		void present();
 		SDL_Renderer* getRenderer();
 		SDL_Window* getWindow();

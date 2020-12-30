@@ -1,11 +1,14 @@
 #include "Tilemap.h"
 
+struct UserData
+{
+    std::string name;
+};
+
 GE::Tilemap::Tilemap(SDL_Renderer* renderer, std::string file)
 {
     _renderer = renderer;
 	_map = tmx_load(file.c_str());
-    _layer = _map->ly_head;
-    addAllLayer();
 }
 
 GE::Tilemap::~Tilemap()
@@ -13,16 +16,17 @@ GE::Tilemap::~Tilemap()
     _renderer = NULL;
     tmx_map_free(_map);
     _layer = NULL;
-    for (int i = 0; i < _tile_resources.size(); i++)
+    for (int i = 0; i < _tiles.size(); i++)
     {
-        delete(_tile_resources[i]);
+        delete(_tiles[i]);
     }
-    _tile_resources.clear();
-    for (int i = 0; i < _object_resources.size(); i++)
+    _tiles.clear();
+    for (int i = 0; i < _objects.size(); i++)
     {
-        delete(_object_resources[i]);
+        delete(_objects[i]);
     }
-    _object_resources.clear();
+    _objects.clear();
+    _removable_objects.clear();
 }
 
 void GE::Tilemap::setColor(int color)
@@ -34,12 +38,12 @@ void GE::Tilemap::setColor(int color)
 void GE::Tilemap::addImageLayer(tmx_image* image)
 {
     GE::Sprite* image_layer = new GE::Sprite(_renderer, image->source);
-    _tile_resources.push_back(image_layer);
+    _tiles.push_back(image_layer);
 }
 
 void GE::Tilemap::addTile(GE::Sprite* tile)
 {
-    _tile_resources.push_back(tile);
+    _tiles.push_back(tile);
 }
 
 void GE::Tilemap::addLayer(tmx_layer* layer)
@@ -50,10 +54,10 @@ void GE::Tilemap::addLayer(tmx_layer* layer)
     tmx_tileset* ts;
     tmx_image* im;
     GE::Sprite* image = NULL;
-    op = _layer->opacity;
+    op = layer->opacity;
     for (i = 0; i < _map->height; i++) {
         for (j = 0; j < _map->width; j++) {
-            gid = (_layer->content.gids[(i * _map->width) + j]) & TMX_FLIP_BITS_REMOVAL;
+            gid = (layer->content.gids[(i * _map->width) + j]) & TMX_FLIP_BITS_REMOVAL;
             if (_map->tiles[gid] != NULL) {
                 ts = _map->tiles[gid]->tileset;
                 im = _map->tiles[gid]->image;
@@ -67,11 +71,49 @@ void GE::Tilemap::addLayer(tmx_layer* layer)
                 else {
                     image = new GE::Sprite(_renderer, ts->image->source);
                 }
-                flags = (_layer->content.gids[(i * _map->width) + j]) & ~TMX_FLIP_BITS_REMOVAL;
+                flags = (layer->content.gids[(i * _map->width) + j]) & ~TMX_FLIP_BITS_REMOVAL;
                 double rect[4] = {(double)x, (double)y, (double)w, (double)h};
                 image->setPosition((double)j * ts->tile_width, (double)i * ts->tile_height);
                 image->setClip(rect);
                 addTile(image);
+            }
+        }
+    }
+}
+
+void GE::Tilemap::addLayer(b2World* world, tmx_layer* layer)
+{
+    unsigned long i, j;
+    unsigned int gid, x, y, w, h, flags;
+    float op;
+    tmx_tileset* ts;
+    tmx_image* im;
+    std::string img = "";
+    op = layer->opacity;
+    for (i = 0; i < _map->height; i++) {
+        for (j = 0; j < _map->width; j++) {
+            gid = (layer->content.gids[(i * _map->width) + j]) & TMX_FLIP_BITS_REMOVAL;
+            if (_map->tiles[gid] != NULL) {
+                ts = _map->tiles[gid]->tileset;
+                im = _map->tiles[gid]->image;
+                x  = _map->tiles[gid]->ul_x;
+                y  = _map->tiles[gid]->ul_y;
+                w  = ts->tile_width;
+                h  = ts->tile_height;
+                if (im) {
+                    img = im->source;
+                }
+                else {
+                    img = ts->image->source;
+                }
+                flags = (layer->content.gids[(i * _map->width) + j]) & ~TMX_FLIP_BITS_REMOVAL;
+                double rect[4] = {(double)x, (double)y, (double)w, (double)h};
+                std::shared_ptr<GE::Sprite> image(new GE::Sprite(_renderer, img));
+                image->setPosition((double)j * ts->tile_width, (double)i * ts->tile_height);
+                image->setClip(rect);
+                std::string name(layer->name);
+                std::shared_ptr<GE::Box2D> box(new GE::Box2D(world, image->getPositionX(), image->getPositionY(), rect[2], rect[3], true, true, name));
+                _removable_objects.push_back(std::make_pair(image, box));
             }
         }
     }
@@ -131,13 +173,35 @@ void GE::Tilemap::addAllLayer()
 void GE::Tilemap::render(double dt)
 {
     setColor(_map->backgroundcolor);
-    for(int i = 0; i < _tile_resources.size(); i++)
+    for(int i = 0; i < _tiles.size(); i++)
     {
-        _tile_resources[i]->draw(dt);
+        _tiles[i]->draw(dt);
+    }
+    for(auto it = _removable_objects.begin(); it != _removable_objects.end(); it++)
+    {
+        it->first->draw(dt);
     }
 }
 
-void GE::Tilemap::addObjectToWorld(b2World* world, std::string name, bool is_sensor)
+void GE::Tilemap::addNormalLayer(std::string layer_name)
+{
+    tmx_layer* layer = _map->ly_head;
+    while (layer)
+    {
+        if (layer->visible)
+        {
+            if (layer->type == L_LAYER)
+            {
+                std::string name(layer->name);
+                if (name == layer_name)
+                    addLayer(layer);
+            }
+        }
+        layer = layer->next;
+    }
+}
+
+void GE::Tilemap::addPhysicsFromObject(b2World* world, std::string object_name)
 {
     tmx_layer* layer = _map->ly_head;
     while (layer)
@@ -150,9 +214,9 @@ void GE::Tilemap::addObjectToWorld(b2World* world, std::string name, bool is_sen
                 tmx_object* head = object_group->head;
                 while (head) {
                     std::string object_name(head->name);
-                    if (object_name == name)
+                    if (object_name == object_name)
                     {
-                        _removable_objects.push_back(new GE::Box2D(world, head->x, head->y, head->width, head->height, true, is_sensor, object_name));
+                        _objects.push_back(new GE::Box2D(world, head->x, head->y, head->width, head->height, true, false, object_name));
                     }
                     head = head->next;
                 }
@@ -162,7 +226,25 @@ void GE::Tilemap::addObjectToWorld(b2World* world, std::string name, bool is_sen
     }
 }
 
-std::vector<GE::Box2D*> GE::Tilemap::getRemovableObjects()
+void GE::Tilemap::addRemovableObjectToWorld(b2World* world, std::string layer_name)
+{
+    tmx_layer* layer = _map->ly_head;
+    while (layer)
+    {
+        if (layer->visible)
+        {
+            if (layer->type == L_LAYER)
+            {
+                std::string name(layer->name);
+                if (name == layer_name)
+                addLayer(world, layer);
+            }
+        }
+        layer = layer->next;
+    }
+}
+
+std::vector<std::pair<std::shared_ptr<GE::Sprite>, std::shared_ptr<GE::Box2D>>>& GE::Tilemap::getRemovableObjects()
 {
     return _removable_objects;
 }

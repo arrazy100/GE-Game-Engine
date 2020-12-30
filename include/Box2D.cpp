@@ -46,7 +46,7 @@ GE::Box2D::Box2D(b2World* world, float x, float y, float w, float h, bool is_sta
         _fixture_def->isSensor = is_sensor;
         _body->CreateFixture(_fixture_def);
         
-        polygon_shape.SetAsBox(pixelToMeter(w) / 2, 0.1, b2Vec2(0, pixelToMeter(h) / 2), 0);
+        polygon_shape.SetAsBox(pixelToMeter(w) / 4, 0.1, b2Vec2(0, pixelToMeter(h) / 2), 0);
         UserData* data = new UserData;
         data->name = "bottom";
         _fixture_def->shape = &polygon_shape;
