@@ -159,7 +159,9 @@ void GE::Init::initBox2DWorld(b2Vec2 gravity)
 
 void GE::Init::updateBox2DWorld(double dt)
 {
-	_box2d_world->SetGravity(b2Vec2(0, 400 * dt));
+	float gravity = 400 * dt;
+	if (gravity > 2) gravity = 2;
+	_box2d_world->SetGravity(b2Vec2(0, gravity));
 	_box2d_world->Step(_box2d_timestep, _velocity_iterations, _position_iterations);
 }
 

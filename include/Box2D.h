@@ -31,6 +31,9 @@ namespace GE
 		void applyJump(float velocity);
 		float pixelToMeter(float pixel);
 		float meterToPixel(float meter);
+		void addFixture(float w, float h, b2Vec2 origin, bool is_sensor, std::string userdata);
+		b2Body* touchWithBody(std::string body_name);
+		b2Body* touchWithFixture(std::string body_name, std::string fixture_name);
 	};
 	class Box2DListener : public b2ContactListener
 	{

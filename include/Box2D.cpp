@@ -45,38 +45,6 @@ GE::Box2D::Box2D(b2World* world, float x, float y, float w, float h, bool is_sta
         _fixture_def->restitution = 0.0f;
         _fixture_def->isSensor = is_sensor;
         _body->CreateFixture(_fixture_def);
-        
-        polygon_shape.SetAsBox(pixelToMeter(w) / 4, 0.1, b2Vec2(0, pixelToMeter(h) / 2), 0);
-        UserData* data = new UserData;
-        data->name = "bottom";
-        _fixture_def->shape = &polygon_shape;
-        _fixture_def->isSensor = true;
-        _fixture_def->userData.pointer = reinterpret_cast<uintptr_t>(data);
-        _body->CreateFixture(_fixture_def);
-        
-        polygon_shape.SetAsBox(pixelToMeter(w) / 2, 0.1, b2Vec2(0, -pixelToMeter(h) / 2), 0);
-        UserData* data2 = new UserData;
-        data2->name = "top";
-        _fixture_def->shape = &polygon_shape;
-        _fixture_def->isSensor = true;
-        _fixture_def->userData.pointer = reinterpret_cast<uintptr_t>(data2);
-        _body->CreateFixture(_fixture_def);
-
-        polygon_shape.SetAsBox(0.1, pixelToMeter(h) / 3, b2Vec2(-pixelToMeter(w) / 2, 0), 0);
-        UserData* data3 = new UserData;
-        data3->name = "left";
-        _fixture_def->shape = &polygon_shape;
-        _fixture_def->isSensor = true;
-        _fixture_def->userData.pointer = reinterpret_cast<uintptr_t>(data3);
-        _body->CreateFixture(_fixture_def);
-
-        polygon_shape.SetAsBox(0.1, pixelToMeter(h) / 3, b2Vec2(pixelToMeter(w) / 2, 0), 0);
-        UserData* data4 = new UserData;
-        data4->name = "right";
-        _fixture_def->shape = &polygon_shape;
-        _fixture_def->isSensor = true;
-        _fixture_def->userData.pointer = reinterpret_cast<uintptr_t>(data4);
-        _body->CreateFixture(_fixture_def);
     }
 }
 
@@ -149,6 +117,68 @@ float GE::Box2D::pixelToMeter(float pixel)
 float GE::Box2D::meterToPixel(float meter)
 {
     return round(meter * PPM);
+}
+
+void GE::Box2D::addFixture(float w, float h, b2Vec2 origin, bool is_sensor, std::string userdata)
+{
+    b2PolygonShape polygon_shape;
+    polygon_shape.SetAsBox(pixelToMeter(w), pixelToMeter(h), b2Vec2(pixelToMeter(origin.x), pixelToMeter(origin.y)), 0);
+    UserData* data = new UserData;
+    data->name = userdata;
+    _fixture_def->shape = &polygon_shape;
+    _fixture_def->isSensor = is_sensor;
+    _fixture_def->userData.pointer = reinterpret_cast<uintptr_t>(data);
+    _body->CreateFixture(_fixture_def);
+}
+
+b2Body* GE::Box2D::touchWithBody(std::string body_name)
+{
+    for (b2ContactEdge* c = getBody()->GetContactList(); c; c = c->next)
+    {
+        if (c && c->contact->IsTouching())
+        {
+            UserData* A = reinterpret_cast<UserData*>(c->contact->GetFixtureA()->GetBody()->GetUserData().pointer);
+            UserData* B = reinterpret_cast<UserData*>(c->contact->GetFixtureB()->GetBody()->GetUserData().pointer);
+
+            if (A && A->name == body_name)
+            {
+                return c->contact->GetFixtureA()->GetBody();
+            }
+            else if (B && B->name == body_name)
+            {
+                return c->contact->GetFixtureB()->GetBody();
+            }
+        }
+    }
+}
+
+b2Body* GE::Box2D::touchWithFixture(std::string body_name, std::string fixture_name)
+{
+    for (b2ContactEdge* c = getBody()->GetContactList(); c; c = c->next)
+    {
+        if (c && c->contact->IsTouching())
+        {
+            UserData* A = reinterpret_cast<UserData*>(c->contact->GetFixtureA()->GetBody()->GetUserData().pointer);
+            UserData* B = reinterpret_cast<UserData*>(c->contact->GetFixtureB()->GetBody()->GetUserData().pointer);
+
+            if ((A && A->name != body_name) || (B && B->name != body_name))
+            {
+                continue;
+            }
+
+            UserData* fixture_A = reinterpret_cast<UserData*>(c->contact->GetFixtureA()->GetUserData().pointer);
+            UserData* fixture_B = reinterpret_cast<UserData*>(c->contact->GetFixtureB()->GetUserData().pointer);
+
+            if (fixture_A && fixture_A->name == body_name)
+            {
+                return c->contact->GetFixtureA()->GetBody();
+            }
+            else if (fixture_B && fixture_B->name == body_name)
+            {
+                return c->contact->GetFixtureB()->GetBody();
+            }
+        }
+    }
 }
 
 void GE::Box2DListener::BeginContact(b2Contact* contact)

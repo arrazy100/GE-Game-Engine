@@ -237,7 +237,7 @@ void GE::Tilemap::addRemovableObjectToWorld(b2World* world, std::string layer_na
             {
                 std::string name(layer->name);
                 if (name == layer_name)
-                addLayer(world, layer);
+                    addLayer(world, layer);
             }
         }
         layer = layer->next;

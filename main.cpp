@@ -24,20 +24,22 @@ struct UserData
 int main(int argc, char **argv)
 {
 	// init window and renderer
-	GE::Init* game = new GE::Init(640, 480);
+	std::unique_ptr<GE::Init> game(new GE::Init(640, 480));
 
 	// init box2d world
-	game->initBox2DWorld(b2Vec2(0, -10));
+	game->initBox2DWorld(b2Vec2(0, 2));
 
 	// add box2d listener
 	GE::Box2DListener listener;
 	game->getBox2DWorld()->SetContactListener(&listener);
 
 	// create sprite for npc
-	GE::Sprite* npc = new GE::Sprite(game->getRenderer(), "sprite/npc.png");
+	std::unique_ptr<GE::Sprite> npc(new GE::Sprite(game->getRenderer(), "sprite/npc.png"));
 
 	// npc physics
-	GE::Box2D* npcPhysics = new GE::Box2D(game->getBox2DWorld(), 100, 300, 32, 32, false, false, "npc");
+	std::unique_ptr<GE::Box2D> npcPhysics(new GE::Box2D(game->getBox2DWorld(), 100, 300, 32, 32, false, false, "npc"));
+	npcPhysics->addFixture(10, 8, b2Vec2(0, 32), true, "bottom");
+	npcPhysics->addFixture(10, 8, b2Vec2(0, -32), true, "top");
 
 	// set npc animation clip for spritesheets
 	double idle_d[] = {0, 0, 32, 32};
@@ -61,7 +63,7 @@ int main(int argc, char **argv)
 	npc->createAnimation("jumping", {128, 96, 192, 128}, size);
 
 	// keyboard input
-	GE::Input* input = new GE::Input();
+	std::unique_ptr<GE::Input> input(new GE::Input());
 	
 	// other variable
 	double dt;
@@ -73,13 +75,16 @@ int main(int argc, char **argv)
 	game->initCamera(1280, 480);
 
 	// map
-	GE::Tilemap* map = new GE::Tilemap(game->getRenderer(), "maps/tes.tmx");
+	std::unique_ptr<GE::Tilemap> map(new GE::Tilemap(game->getRenderer(), "maps/tes.tmx"));
 	map->addNormalLayer("main");
 	map->addPhysicsFromObject(game->getBox2DWorld(), "collision");
 	map->addRemovableObjectToWorld(game->getBox2DWorld(), "coin");
 
+	// enemy
+	
+
 	// text
-	GE::Text* text = new GE::Text(game->getRenderer(), "", "font/agane_roman.ttf", 14, {0, 0, 0, 255}, TTF_STYLE_NORMAL, 640);
+	GE::Text text(game->getRenderer(), "", "font/agane_roman.ttf", 14, {0, 0, 0, 255}, TTF_STYLE_NORMAL, 640);
 
 	// START SECTION FOR GAME LOOP //
 
@@ -90,48 +95,30 @@ int main(int argc, char **argv)
 
 		// START SECTION FOR 2D CAMERA //
 
-		game->setCamera(npc);
+		game->setCamera(npc.get());
 
 		// END SECTION FOR 2D CAMERA //
 
 		// START SECTION FOR PHYSICS //
 
 		game->updateBox2DWorld(dt);
-		
-		for (b2Contact* c = game->getBox2DWorld()->GetContactList(); c; c = c->GetNext())
-		{
-			if (c && c->IsTouching())
-			{
-				UserData* AA = reinterpret_cast<UserData*>(c->GetFixtureA()->GetBody()->GetUserData().pointer);
-				UserData* BB = reinterpret_cast<UserData*>(c->GetFixtureB()->GetBody()->GetUserData().pointer);
 
-				if (AA && AA->name == "coin" && BB && BB->name == "npc")
+		if (npcPhysics->touchWithBody("coin"))
+		{
+			for (auto it = map->getRemovableObjects().begin(); it != map->getRemovableObjects().end();)
+			{
+				if (it->second->getBody() == npcPhysics->touchWithBody("coin"))
 				{
-					b2Body* body = c->GetFixtureA()->GetBody();
-					for (auto it = map->getRemovableObjects().begin(); it != map->getRemovableObjects().end();)
-					{
-						if (it->second->getBody() == body)
-						{
-							coin++;
-							map->getRemovableObjects().erase(it);
-						}
-						else ++it;
-					}
+					coin++;
+					map->getRemovableObjects().erase(it);
 				}
-				else if (AA && AA->name == "npc" && BB && BB->name == "coin")
-				{
-					b2Body* body = c->GetFixtureB()->GetBody();
-					for (auto it = map->getRemovableObjects().begin(); it != map->getRemovableObjects().end();)
-					{
-						if (it->second->getBody() == body)
-						{
-							coin++;
-							map->getRemovableObjects().erase(it);
-						}
-						else ++it;
-					}
-				}
+				else ++it;
 			}
+		}
+
+		if (npcPhysics->touchWithFixture("enemy", "top"))
+		{
+			
 		}
 		
 		npc->setPosition((double)npcPhysics->getPositionX(), (double)npcPhysics->getPositionY());
@@ -174,7 +161,7 @@ int main(int argc, char **argv)
 		if (input->getKeyboardPressed("Up") && !isJumping)
 		{
 			isJumping = true;
-			npcPhysics->applyJump(-1.8);
+			npcPhysics->applyJump(-2.1);
 		}
 
 		if (input->getKeyboardReleased("Right"))
@@ -207,8 +194,8 @@ int main(int argc, char **argv)
 		game->render();
 		map->render(dt);
 		npc->draw(dt); //draw npc
-		text->changeText(std::to_string(coin), false);
-		text->draw(game->getCameraX() + 0, 0, dt);
+		text.changeText(std::to_string(coin), false);
+		text.draw(game->getCameraX() + 0, 0, dt);
 
 		// END SECTION FOR DRAW OBJECTS //
 
@@ -217,15 +204,6 @@ int main(int argc, char **argv)
 	}
 
 	// END SECTION FOR GAME LOOP //
-
-	// DESTRUCTOR //
-
-	delete(text);
-	delete(map);
-	delete(npcPhysics);
-	delete(npc);
-	delete(input);
-	delete(game);
 
 	// END SECTION FOR DESTRUCTOR //
 
