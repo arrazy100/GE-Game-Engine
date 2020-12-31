@@ -11,7 +11,7 @@
 
 struct UserData
 {
-    std::string name;
+	std::string name;
 };
 
 /**
@@ -38,8 +38,10 @@ int main(int argc, char **argv)
 
 	// npc physics
 	std::unique_ptr<GE::Box2D> npcPhysics(new GE::Box2D(game->getBox2DWorld(), 100, 300, 32, 32, false, false, "npc"));
-	npcPhysics->addFixture(10, 8, b2Vec2(0, 32), true, "bottom");
-	npcPhysics->addFixture(10, 8, b2Vec2(0, -32), true, "top");
+	npcPhysics->addFixture(8, 8, b2Vec2(0, 32), true, "bottom");
+	npcPhysics->addFixture(8, 8, b2Vec2(0, 0), true, "top");
+	npcPhysics->addFixture(8, 8, b2Vec2(16, 16), true, "right");
+	npcPhysics->addFixture(8, 8, b2Vec2(-16, 16), true, "left");
 
 	// set npc animation clip for spritesheets
 	double idle_d[] = {0, 0, 32, 32};
@@ -78,10 +80,9 @@ int main(int argc, char **argv)
 	std::unique_ptr<GE::Tilemap> map(new GE::Tilemap(game->getRenderer(), "maps/tes.tmx"));
 	map->addNormalLayer("main");
 	map->addPhysicsFromObject(game->getBox2DWorld(), "collision");
-	map->addRemovableObjectToWorld(game->getBox2DWorld(), "coin");
+	map->addRemovableObjectToWorld(game->getBox2DWorld(), "coin", true, true);
 
 	// enemy
-	
 
 	// text
 	GE::Text text(game->getRenderer(), "", "font/agane_roman.ttf", 14, {0, 0, 0, 255}, TTF_STYLE_NORMAL, 640);
@@ -118,7 +119,7 @@ int main(int argc, char **argv)
 
 		if (npcPhysics->touchWithFixture("enemy", "top"))
 		{
-			
+
 		}
 		
 		npc->setPosition((double)npcPhysics->getPositionX(), (double)npcPhysics->getPositionY());

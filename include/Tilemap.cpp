@@ -81,7 +81,7 @@ void GE::Tilemap::addLayer(tmx_layer* layer)
     }
 }
 
-void GE::Tilemap::addLayer(b2World* world, tmx_layer* layer)
+void GE::Tilemap::addLayerToWorld(b2World* world, tmx_layer* layer, bool is_static, bool is_sensor)
 {
     unsigned long i, j;
     unsigned int gid, x, y, w, h, flags;
@@ -112,7 +112,7 @@ void GE::Tilemap::addLayer(b2World* world, tmx_layer* layer)
                 image->setPosition((double)j * ts->tile_width, (double)i * ts->tile_height);
                 image->setClip(rect);
                 std::string name(layer->name);
-                std::shared_ptr<GE::Box2D> box(new GE::Box2D(world, image->getPositionX(), image->getPositionY(), rect[2], rect[3], true, true, name));
+                std::shared_ptr<GE::Box2D> box(new GE::Box2D(world, image->getPositionX(), image->getPositionY(), rect[2], rect[3], is_static, is_sensor, name));
                 _removable_objects.push_back(std::make_pair(image, box));
             }
         }
@@ -226,7 +226,7 @@ void GE::Tilemap::addPhysicsFromObject(b2World* world, std::string object_name)
     }
 }
 
-void GE::Tilemap::addRemovableObjectToWorld(b2World* world, std::string layer_name)
+void GE::Tilemap::addRemovableObjectToWorld(b2World* world, std::string layer_name, bool is_static, bool is_sensor)
 {
     tmx_layer* layer = _map->ly_head;
     while (layer)
@@ -237,7 +237,7 @@ void GE::Tilemap::addRemovableObjectToWorld(b2World* world, std::string layer_na
             {
                 std::string name(layer->name);
                 if (name == layer_name)
-                    addLayer(world, layer);
+                    addLayerToWorld(world, layer, is_static, is_sensor);
             }
         }
         layer = layer->next;

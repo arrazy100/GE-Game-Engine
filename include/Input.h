@@ -17,6 +17,9 @@ namespace GE
             void updateKeyboard();
             bool getKeyboardPressed(std::string key);
             bool getKeyboardReleased(std::string key);
+            bool getLeftMouseClicked(int* mouse_x, int* mouse_y);
+            bool getRightMouseClicked(int* mouse_x, int* mouse_y);
+            bool getMiddleMouseClicked(int* mouse_x, int* mouse_y);
     };
 }
 

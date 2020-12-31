@@ -36,3 +36,18 @@ bool GE::Input::getKeyboardReleased(std::string key)
 
     return false;
 }
+
+bool GE::Input::getLeftMouseClicked(int* mouse_x, int* mouse_y)
+{
+    return (SDL_GetMouseState(mouse_x, mouse_y) & SDL_BUTTON(SDL_BUTTON_LEFT));
+}
+
+bool GE::Input::getRightMouseClicked(int* mouse_x, int* mouse_y)
+{
+    return (SDL_GetMouseState(mouse_x, mouse_y) & SDL_BUTTON(SDL_BUTTON_RIGHT));
+}
+
+bool GE::Input::getMiddleMouseClicked(int* mouse_x, int* mouse_y)
+{
+    return (SDL_GetMouseState(mouse_x, mouse_y) & SDL_BUTTON(SDL_BUTTON_MIDDLE));
+}
