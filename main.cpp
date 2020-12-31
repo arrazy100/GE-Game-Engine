@@ -138,7 +138,7 @@ int main(int argc, char **argv)
 
 		if (input->getKeyboardPressed("Right") && input->getKeyboardPressed("Left"))
 		{
-			npcPhysics->moveHorizontal(0);
+			npcPhysics->stopMoveHorizontal();
 		}
 		else if (input->getKeyboardPressed("Right"))
 		{
@@ -173,7 +173,7 @@ int main(int argc, char **argv)
 
 			npcPhysics->stopMoveHorizontal();
 		}
-		else if (input->getKeyboardReleased("Left") && !isJumping)
+		if (input->getKeyboardReleased("Left") && !isJumping)
 		{
 			// set animation to idle, and velocity to 0
 			if (!isJumping)
@@ -181,7 +181,7 @@ int main(int argc, char **argv)
 
 			npcPhysics->stopMoveHorizontal();
 		}
-		else if (input->getKeyboardReleased("Up") && !isJumping)
+		if (input->getKeyboardReleased("Up") && !isJumping)
 		{
 			if (player_direction) npc->setClip(idle_r);
 			else npc->setClip(idle_l);

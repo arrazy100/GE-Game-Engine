@@ -116,6 +116,7 @@ void GE::Box2D::applyJump(float velocity)
 {
     float impulse = _body->GetMass() * velocity;
 	_body->ApplyLinearImpulse(b2Vec2(0, impulse), _body->GetWorldCenter(), true);
+    stopMoveHorizontal();
 }
 
 float GE::Box2D::pixelToMeter(float pixel)
