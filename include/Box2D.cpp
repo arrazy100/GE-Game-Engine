@@ -196,6 +196,32 @@ b2Body* GE::Box2D::touchWithFixture(std::string body_name, std::string fixture_n
     }
 }
 
+void GE::Box2D::drawBody(SDL_Renderer* renderer)
+{
+    b2Fixture* fixture = NULL;
+	
+	for (b2Fixture* f = _body->GetFixtureList(); f; f = f->GetNext())
+	{
+		fixture = f;
+	}
+
+	b2PolygonShape* shape = (b2PolygonShape*) fixture->GetShape();
+
+    b2Vec2 p1 = _body->GetWorldPoint(shape->m_vertices[0]);
+    b2Vec2 p2 = _body->GetWorldPoint(shape->m_vertices[1]);
+    b2Vec2 p3 = _body->GetWorldPoint(shape->m_vertices[2]);
+    b2Vec2 p4 = _body->GetWorldPoint(shape->m_vertices[3]);
+
+    SDL_Rect r;
+    r.x = meterToPixel(p1.x);
+    r.y = meterToPixel(p1.y);
+    r.w = meterToPixel(p2.x - p1.x);
+    r.h = meterToPixel(p3.y - p1.y);
+
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+    SDL_RenderFillRect(renderer, &r);
+}
+
 void GE::Box2D::drawFixture(SDL_Renderer* renderer, std::string fixture_name)
 {
     b2Fixture* fixture = NULL;

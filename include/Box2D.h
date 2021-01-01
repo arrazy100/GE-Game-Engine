@@ -34,6 +34,7 @@ namespace GE
 		void addFixture(float w, float h, b2Vec2 origin, bool is_sensor, std::string userdata);
 		b2Body* touchWithBody(std::string body_name);
 		b2Body* touchWithFixture(std::string body_name, std::string fixture_name);
+		void drawBody(SDL_Renderer* renderer);
 		void drawFixture(SDL_Renderer* renderer, std::string fixture_name);
 	};
 	class Box2DListener : public b2ContactListener

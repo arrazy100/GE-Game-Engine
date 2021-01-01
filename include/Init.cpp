@@ -1,10 +1,5 @@
 #include "Init.h"
 
-struct UserData
-{
-    std::string name;
-};
-
 /**
  * @brief
  * @param screen_width set window width
@@ -41,6 +36,24 @@ GE::Init::Init(const int screen_width, const int screen_height)
 		}
 	}
 	TTF_Init();
+
+	//initialize Audio
+	if (SDL_Init(SDL_INIT_AUDIO) == -1)
+	{
+		printf("SDL Audio Could not initialize! SDL Error: %s\n", SDL_GetError());
+	}
+
+	int flags = MIX_INIT_OGG|MIX_INIT_MOD|MIX_INIT_MP3;
+	int initted = Mix_Init(flags);
+
+	if (initted&flags != flags) {
+		printf("Mix_Init: Failed to init required sound format!\n");
+		printf("Mix_Init: %s\n", Mix_GetError());
+	}
+
+	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024)==-1) {
+    	printf("Could not open Mix Audio! Mix_OpenAudio: %s\n", Mix_GetError());
+	}
 }
 
 /**
@@ -59,6 +72,7 @@ GE::Init::~Init()
 	//quit system
 	SDL_Quit();
 	TTF_Quit();
+	Mix_CloseAudio();
 	delete(_box2d_world);
 	_box2d_world = NULL;
 }

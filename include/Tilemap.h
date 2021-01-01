@@ -38,6 +38,7 @@ namespace GE
 		void addPhysicsFromObject(b2World* world, std::string object_name);
 		void addRemovableObjectToWorld(b2World* world, std::string layer_name, bool is_static, bool is_sensor);
 		std::vector<std::pair<std::shared_ptr<GE::Sprite>, std::shared_ptr<GE::Box2D>>>& getRemovableObjects();
+		std::vector<GE::Box2D*>& getObjects();
 	};
 } // namespace GE
 

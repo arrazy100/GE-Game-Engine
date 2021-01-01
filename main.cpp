@@ -6,6 +6,7 @@
 #include "include/Input.h"
 #include "include/Physics.h"
 #include "include/Sprite.h"
+#include "include/Sound.h"
 #include "include/Text.h"
 #include "include/Tilemap.h"
 
@@ -82,7 +83,15 @@ int main(int argc, char **argv)
 	map->addPhysicsFromObject(game->getBox2DWorld(), "collision");
 	map->addRemovableObjectToWorld(game->getBox2DWorld(), "coin", true, true);
 
-	// enemy
+	// coin sound effect
+	std::unique_ptr<GE::Sound> coin_collect(new GE::Sound());
+	coin_collect->loadSoundEffect("sound/coin_collect.wav");
+	coin_collect->changeVolume(50);
+
+	// bg
+	std::unique_ptr<GE::Sound> bg(new GE::Sound());
+	bg->loadMusic("sound/bg.mp3");
+	bg->changeVolume(100);
 
 	// text
 	GE::Text text(game->getRenderer(), "", "font/agane_roman.ttf", 14, {0, 0, 0, 255}, TTF_STYLE_NORMAL, 640);
@@ -91,6 +100,8 @@ int main(int argc, char **argv)
 
 	while (game->update())
 	{
+		if (!bg->isPlaying()) bg->play(-1);
+
 		// get delta time
 		dt = game->getDeltaTime();
 
@@ -110,6 +121,7 @@ int main(int argc, char **argv)
 			{
 				if (it->second->getBody() == npcPhysics->touchWithBody("coin"))
 				{
+					coin_collect->play(0);
 					coin++;
 					map->getRemovableObjects().erase(it);
 				}
@@ -117,10 +129,12 @@ int main(int argc, char **argv)
 			}
 		}
 
+		/*
 		if (npcPhysics->touchWithFixture("enemy", "top"))
 		{
 
 		}
+		*/
 		
 		npc->setPosition((double)npcPhysics->getPositionX(), (double)npcPhysics->getPositionY());
 
@@ -197,6 +211,12 @@ int main(int argc, char **argv)
 		npc->draw(dt); //draw npc
 		text.changeText(std::to_string(coin), false);
 		text.draw(game->getCameraX() + 0, 0, dt);
+		/*
+		for (int i = 0; i < map->getObjects().size(); i++)
+		{
+			map->getObjects()[i]->drawBody(game->getRenderer());
+		}
+		*/
 
 		// END SECTION FOR DRAW OBJECTS //
 

@@ -1,4 +1,3 @@
-Sound implementation
 Game state implementation
 Testing platformer game making
 Android Porting

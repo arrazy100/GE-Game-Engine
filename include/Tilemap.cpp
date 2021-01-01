@@ -173,11 +173,11 @@ void GE::Tilemap::addAllLayer()
 void GE::Tilemap::render(double dt)
 {
     setColor(_map->backgroundcolor);
-    for(int i = 0; i < _tiles.size(); i++)
+    for (int i = 0; i < _tiles.size(); i++)
     {
         _tiles[i]->draw(dt);
     }
-    for(auto it = _removable_objects.begin(); it != _removable_objects.end(); it++)
+    for (auto it = _removable_objects.begin(); it != _removable_objects.end(); it++)
     {
         it->first->draw(dt);
     }
@@ -247,4 +247,9 @@ void GE::Tilemap::addRemovableObjectToWorld(b2World* world, std::string layer_na
 std::vector<std::pair<std::shared_ptr<GE::Sprite>, std::shared_ptr<GE::Box2D>>>& GE::Tilemap::getRemovableObjects()
 {
     return _removable_objects;
+}
+
+std::vector<GE::Box2D*>& GE::Tilemap::getObjects()
+{
+    return _objects;
 }
