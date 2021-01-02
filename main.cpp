@@ -1,19 +1,14 @@
 #include <algorithm>
 #include <string>
 
-#include "include/Box2D.h"
-#include "include/Init.h"
-#include "include/Input.h"
-#include "include/Physics.h"
-#include "include/Sprite.h"
-#include "include/Sound.h"
-#include "include/Text.h"
-#include "include/Tilemap.h"
-
-struct UserData
-{
-	std::string name;
-};
+#include <Box2D.h>
+#include <Init.h>
+#include <Input.h>
+#include <Physics.h>
+#include <Sprite.h>
+#include <Sound.h>
+#include <Text.h>
+#include <Tilemap.h>
 
 /**
  * @brief

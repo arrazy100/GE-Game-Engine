@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/afar0308/Documents/Game Engine V2
-BuildDirectory: /home/afar0308/Documents/Game Engine V2/build
+SourceDirectory: /home/afar0308/Documents/GE-Game-Engine
+BuildDirectory: /home/afar0308/Documents/GE-Game-Engine/build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -36,7 +36,7 @@ ScpCommand: /usr/bin/scp
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/afar0308/Documents/Game Engine V2"
+ConfigureCommand: "/usr/bin/cmake" "/home/afar0308/Documents/GE-Game-Engine"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
@@ -81,7 +81,7 @@ ValgrindCommand:
 ValgrindCommandOptions: 
 MemoryCheckType: 
 MemoryCheckSanitizerOptions: 
-MemoryCheckCommand: MEMORYCHECK_COMMAND-NOTFOUND
+MemoryCheckCommand: /usr/bin/valgrind
 MemoryCheckCommandOptions: 
 MemoryCheckSuppressionFile: 
 

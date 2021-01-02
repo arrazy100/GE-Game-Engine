@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/afar0308/Documents/Game Engine V2/build/CMakeFiles/3.10.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/3.10.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/x86_64-linux-gnu-g++-7 
@@ -23,22 +23,22 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/afar0308/Documents/Game Engine V2/build/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/afar0308/Documents/Game Engine V2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_46cd4"
-[1/2] Building C object CMakeFiles/cmTC_46cd4.dir/testCCompiler.c.o
-[2/2] Linking C executable cmTC_46cd4
+Run Build Command:"/usr/bin/ninja" "cmTC_01e98"
+[1/2] Building C object CMakeFiles/cmTC_01e98.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_01e98
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/afar0308/Documents/Game Engine V2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_48519"
-[1/2] Building C object CMakeFiles/cmTC_48519.dir/CMakeCCompilerABI.c.o
-[2/2] Linking C executable cmTC_48519
+Run Build Command:"/usr/bin/ninja" "cmTC_e602b"
+[1/2] Building C object CMakeFiles/cmTC_e602b.dir/CMakeCCompilerABI.c.o
+[2/2] Linking C executable cmTC_e602b
 Using built-in specs.
 COLLECT_GCC=/usr/bin/x86_64-linux-gnu-gcc-7
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -50,18 +50,18 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_48519' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbw3l6s.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_48519 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_48519.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_48519' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_e602b' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKemDQq.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e602b /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_e602b.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_e602b' '-mtune=generic' '-march=x86-64'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/afar0308/Documents/Game Engine V2/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_48519"]
-  ignore line: [[1/2] Building C object CMakeFiles/cmTC_48519.dir/CMakeCCompilerABI.c.o]
-  ignore line: [[2/2] Linking C executable cmTC_48519]
+  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_e602b"]
+  ignore line: [[1/2] Building C object CMakeFiles/cmTC_e602b.dir/CMakeCCompilerABI.c.o]
+  ignore line: [[2/2] Linking C executable cmTC_e602b]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/x86_64-linux-gnu-gcc-7]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -73,13 +73,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_48519' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbw3l6s.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_48519 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_48519.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_e602b' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKemDQq.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e602b /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_e602b.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccbw3l6s.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccKemDQq.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -98,7 +98,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_48519] ==> ignore
+    arg [cmTC_e602b] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -110,7 +110,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_48519.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_e602b.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -140,11 +140,11 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/afar0308/Documents/Game Engine V2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_23481"
-[1/2] Building C object CMakeFiles/cmTC_23481.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_23481
+Run Build Command:"/usr/bin/ninja" "cmTC_35f8a"
+[1/2] Building C object CMakeFiles/cmTC_35f8a.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_35f8a
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -154,11 +154,11 @@ Run Build Command:"/usr/bin/ninja" "cmTC_23481"
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/afar0308/Documents/Game Engine V2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_ed8db"
-[1/2] Building C object CMakeFiles/cmTC_ed8db.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_ed8db
+Run Build Command:"/usr/bin/ninja" "cmTC_4237b"
+[1/2] Building C object CMakeFiles/cmTC_4237b.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_4237b
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -168,11 +168,11 @@ Run Build Command:"/usr/bin/ninja" "cmTC_ed8db"
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/afar0308/Documents/Game Engine V2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_e3b0f"
-[1/2] Building C object CMakeFiles/cmTC_e3b0f.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_e3b0f
+Run Build Command:"/usr/bin/ninja" "cmTC_4e5ca"
+[1/2] Building C object CMakeFiles/cmTC_4e5ca.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_4e5ca
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -180,19 +180,19 @@ Run Build Command:"/usr/bin/ninja" "cmTC_e3b0f"
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/afar0308/Documents/Game Engine V2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_bf228"
-[1/2] Building CXX object CMakeFiles/cmTC_bf228.dir/testCXXCompiler.cxx.o
-[2/2] Linking CXX executable cmTC_bf228
+Run Build Command:"/usr/bin/ninja" "cmTC_37872"
+[1/2] Building CXX object CMakeFiles/cmTC_37872.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_37872
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/afar0308/Documents/Game Engine V2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_fa6fa"
-[1/2] Building CXX object CMakeFiles/cmTC_fa6fa.dir/CMakeCXXCompilerABI.cpp.o
-[2/2] Linking CXX executable cmTC_fa6fa
+Run Build Command:"/usr/bin/ninja" "cmTC_f74fe"
+[1/2] Building CXX object CMakeFiles/cmTC_f74fe.dir/CMakeCXXCompilerABI.cpp.o
+[2/2] Linking CXX executable cmTC_f74fe
 Using built-in specs.
 COLLECT_GCC=/usr/bin/x86_64-linux-gnu-g++-7
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -204,18 +204,18 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_fa6fa' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKarQlo.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_fa6fa /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_fa6fa.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_fa6fa' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f74fe' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccF2tecm.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f74fe /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_f74fe.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f74fe' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/afar0308/Documents/Game Engine V2/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_fa6fa"]
-  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_fa6fa.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [[2/2] Linking CXX executable cmTC_fa6fa]
+  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_f74fe"]
+  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_f74fe.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [[2/2] Linking CXX executable cmTC_f74fe]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/x86_64-linux-gnu-g++-7]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -227,13 +227,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_fa6fa' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKarQlo.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_fa6fa /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_fa6fa.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f74fe' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccF2tecm.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f74fe /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_f74fe.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccKarQlo.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccF2tecm.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -252,7 +252,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_fa6fa] ==> ignore
+    arg [cmTC_f74fe] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -264,7 +264,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_fa6fa.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_f74fe.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -290,11 +290,11 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/afar0308/Documents/Game Engine V2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_07605"
-[1/2] Building CXX object CMakeFiles/cmTC_07605.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_07605
+Run Build Command:"/usr/bin/ninja" "cmTC_bbc24"
+[1/2] Building CXX object CMakeFiles/cmTC_bbc24.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_bbc24
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -357,11 +357,11 @@ Run Build Command:"/usr/bin/ninja" "cmTC_07605"
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/afar0308/Documents/Game Engine V2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_8f9a6"
-[1/2] Building CXX object CMakeFiles/cmTC_8f9a6.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_8f9a6
+Run Build Command:"/usr/bin/ninja" "cmTC_e4dd6"
+[1/2] Building CXX object CMakeFiles/cmTC_e4dd6.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_e4dd6
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -424,11 +424,11 @@ Run Build Command:"/usr/bin/ninja" "cmTC_8f9a6"
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/afar0308/Documents/Game Engine V2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_3f1fd"
-[1/2] Building CXX object CMakeFiles/cmTC_3f1fd.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_3f1fd
+Run Build Command:"/usr/bin/ninja" "cmTC_e2c53"
+[1/2] Building CXX object CMakeFiles/cmTC_e2c53.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_e2c53
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -491,11 +491,11 @@ Run Build Command:"/usr/bin/ninja" "cmTC_3f1fd"
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/afar0308/Documents/Game Engine V2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_e3aff"
-[1/2] Building CXX object CMakeFiles/cmTC_e3aff.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_e3aff
+Run Build Command:"/usr/bin/ninja" "cmTC_88021"
+[1/2] Building CXX object CMakeFiles/cmTC_88021.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_88021
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -556,18 +556,3148 @@ Run Build Command:"/usr/bin/ninja" "cmTC_e3aff"
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
 Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /home/afar0308/Documents/Game Engine V2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_8d08d"
-[1/2] Building C object CMakeFiles/cmTC_8d08d.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_8d08d
+Run Build Command:"/usr/bin/ninja" "cmTC_3bf20"
+[1/2] Building C object CMakeFiles/cmTC_3bf20.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_3bf20
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
-Change Dir: /home/afar0308/Documents/Game Engine V2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_9804c"
-[1/2] Building C object CMakeFiles/cmTC_9804c.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_9804c
+Run Build Command:"/usr/bin/ninja" "cmTC_2460d"
+[1/2] Building C object CMakeFiles/cmTC_2460d.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_2460d
+
+
+Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_07e07"
+[1/2] Building C object CMakeFiles/cmTC_07e07.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_07e07
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_246d0"
+[1/2] Building C object CMakeFiles/cmTC_246d0.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_246d0
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_e7432"
+[1/2] Building C object CMakeFiles/cmTC_e7432.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_e7432
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_40b29"
+[1/2] Building C object CMakeFiles/cmTC_40b29.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_40b29
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_092ac"
+[1/2] Building C object CMakeFiles/cmTC_092ac.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_092ac
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_d1aaf"
+[1/2] Building C object CMakeFiles/cmTC_d1aaf.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_d1aaf
+
+
+Determining if files stdint.h exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_9e6f4"
+[1/2] Building C object CMakeFiles/cmTC_9e6f4.dir/CheckIncludeFiles.c.o
+[2/2] Linking C executable cmTC_9e6f4
+
+
+Performing C SOURCE FILE Test HAVE_GCC_WALL succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_b6c92"
+[1/2] Building C object CMakeFiles/cmTC_b6c92.dir/src.c.o
+[2/2] Linking C executable cmTC_b6c92
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test HAVE_GCC_NO_STRICT_ALIASING succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_8dd4f"
+[1/2] Building C object CMakeFiles/cmTC_8dd4f.dir/src.c.o
+[2/2] Linking C executable cmTC_8dd4f
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test HAVE_GCC_WDECLARATION_AFTER_STATEMENT succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_a19ae"
+[1/2] Building C object CMakeFiles/cmTC_a19ae.dir/src.c.o
+[2/2] Linking C executable cmTC_a19ae
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test HAVE_GCC_WERROR_DECLARATION_AFTER_STATEMENT succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_6527f"
+[1/2] Building C object CMakeFiles/cmTC_6527f.dir/src.c.o
+[2/2] Linking C executable cmTC_6527f
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test HAVE_GCC_ATOMICS succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_7e866"
+[1/2] Building C object CMakeFiles/cmTC_7e866.dir/src.c.o
+[2/2] Linking C executable cmTC_7e866
+
+Source file was:
+int main(int argc, char **argv) {
+        int a;
+        void *x, *y, *z;
+        __sync_lock_test_and_set(&a, 4);
+        __sync_lock_test_and_set(&x, y);
+        __sync_fetch_and_add(&a, 1);
+        __sync_bool_compare_and_swap(&a, 5, 10);
+        __sync_bool_compare_and_swap(&x, y, z); }
+Performing C SOURCE FILE Test HAVE_GCC_FVISIBILITY succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_4c283"
+[1/2] Building C object CMakeFiles/cmTC_4c283.dir/src.c.o
+[2/2] Linking C executable cmTC_4c283
+
+Source file was:
+
+      #if !defined(__GNUC__) || __GNUC__ < 4
+      #error SDL only uses visibility attributes in GCC 4 or newer
+      #endif
+      int main(int argc, char **argv) {}
+Performing C SOURCE FILE Test HAVE_GCC_WSHADOW succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_2044c"
+[1/2] Building C object CMakeFiles/cmTC_2044c.dir/src.c.o
+[2/2] Linking C executable cmTC_2044c
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test HAVE_NO_UNDEFINED succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_13c35"
+[1/2] Building C object CMakeFiles/cmTC_13c35.dir/src.c.o
+[2/2] Linking C executable cmTC_13c35
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test HAVE_MMX succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_d00f6"
+[1/2] Building C object CMakeFiles/cmTC_d00f6.dir/src.c.o
+[2/2] Linking C executable cmTC_d00f6
+
+Source file was:
+
+          #ifdef __MINGW32__
+          #include <_mingw.h>
+          #ifdef __MINGW64_VERSION_MAJOR
+          #include <intrin.h>
+          #else
+          #include <mmintrin.h>
+          #endif
+          #else
+          #include <mmintrin.h>
+          #endif
+          #ifndef __MMX__
+          #error Assembler CPP flag not enabled
+          #endif
+          int main(int argc, char **argv) { }
+Performing C SOURCE FILE Test HAVE_3DNOW succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_bc1ed"
+[1/2] Building C object CMakeFiles/cmTC_bc1ed.dir/src.c.o
+[2/2] Linking C executable cmTC_bc1ed
+
+Source file was:
+
+          #include <mm3dnow.h>
+          #ifndef __3dNOW__
+          #error Assembler CPP flag not enabled
+          #endif
+          int main(int argc, char **argv) {
+            void *p = 0;
+            _m_prefetch(p);
+          }
+Performing C SOURCE FILE Test HAVE_SSE succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_85f20"
+[1/2] Building C object CMakeFiles/cmTC_85f20.dir/src.c.o
+[2/2] Linking C executable cmTC_85f20
+
+Source file was:
+
+          #ifdef __MINGW32__
+          #include <_mingw.h>
+          #ifdef __MINGW64_VERSION_MAJOR
+          #include <intrin.h>
+          #else
+          #include <xmmintrin.h>
+          #endif
+          #else
+          #include <xmmintrin.h>
+          #endif
+          #ifndef __SSE__
+          #error Assembler CPP flag not enabled
+          #endif
+          int main(int argc, char **argv) { }
+Performing C SOURCE FILE Test HAVE_SSE2 succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_8a572"
+[1/2] Building C object CMakeFiles/cmTC_8a572.dir/src.c.o
+[2/2] Linking C executable cmTC_8a572
+
+Source file was:
+
+          #ifdef __MINGW32__
+          #include <_mingw.h>
+          #ifdef __MINGW64_VERSION_MAJOR
+          #include <intrin.h>
+          #else
+          #include <emmintrin.h>
+          #endif
+          #else
+          #include <emmintrin.h>
+          #endif
+          #ifndef __SSE2__
+          #error Assembler CPP flag not enabled
+          #endif
+          int main(int argc, char **argv) { }
+Performing C SOURCE FILE Test HAVE_SSE3 succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_27d6e"
+[1/2] Building C object CMakeFiles/cmTC_27d6e.dir/src.c.o
+[2/2] Linking C executable cmTC_27d6e
+
+Source file was:
+
+          #ifdef __MINGW32__
+          #include <_mingw.h>
+          #ifdef __MINGW64_VERSION_MAJOR
+          #include <intrin.h>
+          #else
+          #include <pmmintrin.h>
+          #endif
+          #else
+          #include <pmmintrin.h>
+          #endif
+          #ifndef __SSE3__
+          #error Assembler CPP flag not enabled
+          #endif
+          int main(int argc, char **argv) { }
+Determining if the include file immintrin.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_e4f87"
+[1/2] Building C object CMakeFiles/cmTC_e4f87.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_e4f87
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_828cd"
+[1/2] Building C object CMakeFiles/cmTC_828cd.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_828cd
+
+
+Determining if the include file stdio.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_7210e"
+[1/2] Building C object CMakeFiles/cmTC_7210e.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_7210e
+
+
+Determining if the include file stdlib.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_54270"
+[1/2] Building C object CMakeFiles/cmTC_54270.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_54270
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_f8cdd"
+[1/2] Building C object CMakeFiles/cmTC_f8cdd.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_f8cdd
+
+
+Determining if the include file stdarg.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_f9f83"
+[1/2] Building C object CMakeFiles/cmTC_f9f83.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_f9f83
+
+
+Determining if the include file malloc.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_43393"
+[1/2] Building C object CMakeFiles/cmTC_43393.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_43393
+
+
+Determining if the include file memory.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_5ed95"
+[1/2] Building C object CMakeFiles/cmTC_5ed95.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_5ed95
+
+
+Determining if the include file string.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_e69fd"
+[1/2] Building C object CMakeFiles/cmTC_e69fd.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_e69fd
+
+
+Determining if the include file limits.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_e6446"
+[1/2] Building C object CMakeFiles/cmTC_e6446.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_e6446
+
+
+Determining if the include file strings.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_63dcb"
+[1/2] Building C object CMakeFiles/cmTC_63dcb.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_63dcb
+
+
+Determining if the include file wchar.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_7d3a4"
+[1/2] Building C object CMakeFiles/cmTC_7d3a4.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_7d3a4
+
+
+Determining if the include file inttypes.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_7683f"
+[1/2] Building C object CMakeFiles/cmTC_7683f.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_7683f
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_39843"
+[1/2] Building C object CMakeFiles/cmTC_39843.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_39843
+
+
+Determining if the include file ctype.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_833be"
+[1/2] Building C object CMakeFiles/cmTC_833be.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_833be
+
+
+Determining if the include file math.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_e9e33"
+[1/2] Building C object CMakeFiles/cmTC_e9e33.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_e9e33
+
+
+Determining if the include file iconv.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_6b039"
+[1/2] Building C object CMakeFiles/cmTC_6b039.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_6b039
+
+
+Determining if the include file signal.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_ecd0f"
+[1/2] Building C object CMakeFiles/cmTC_ecd0f.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_ecd0f
+
+
+Determining if files stddef.h;stdarg.h;stdlib.h;string.h;stdio.h;wchar.h;float.h exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_4babf"
+[1/2] Building C object CMakeFiles/cmTC_4babf.dir/CheckIncludeFiles.c.o
+[2/2] Linking C executable cmTC_4babf
+
+
+Determining size of size_t passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_b95d5"
+[1/2] Building C object CMakeFiles/cmTC_b95d5.dir/SIZEOF_SIZE_T.c.o
+[2/2] Linking C executable cmTC_b95d5
+
+
+Determining if the M_PI exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_e60a7"
+[1/2] Building C object CMakeFiles/cmTC_e60a7.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_e60a7
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef M_PI
+  return ((int*)(&M_PI))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C SOURCE FILE Test HAVE_MPROTECT succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_3bd3f"
+[1/2] Building C object CMakeFiles/cmTC_3bd3f.dir/src.c.o
+[2/2] Linking C executable cmTC_3bd3f
+
+Source file was:
+#include <sys/types.h>
+                             #include <sys/mman.h>
+                             int main() { }
+Determining if the strtod exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_e8dfe"
+[1/2] Building C object CMakeFiles/cmTC_e8dfe.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_e8dfe
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtod
+  return ((int*)(&strtod))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the malloc exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_d6aba"
+[1/2] Building C object CMakeFiles/cmTC_d6aba.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_d6aba
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef malloc
+  return ((int*)(&malloc))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the calloc exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_b89a2"
+[1/2] Building C object CMakeFiles/cmTC_b89a2.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_b89a2
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef calloc
+  return ((int*)(&calloc))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the realloc exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_e03ad"
+[1/2] Building C object CMakeFiles/cmTC_e03ad.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_e03ad
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef realloc
+  return ((int*)(&realloc))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the free exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_7c4ed"
+[1/2] Building C object CMakeFiles/cmTC_7c4ed.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_7c4ed
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef free
+  return ((int*)(&free))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the getenv exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_1a27c"
+[1/2] Building C object CMakeFiles/cmTC_1a27c.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_1a27c
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getenv
+  return ((int*)(&getenv))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the setenv exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_411ee"
+[1/2] Building C object CMakeFiles/cmTC_411ee.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_411ee
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setenv
+  return ((int*)(&setenv))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the putenv exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_cad38"
+[1/2] Building C object CMakeFiles/cmTC_cad38.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_cad38
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef putenv
+  return ((int*)(&putenv))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the unsetenv exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_3ec89"
+[1/2] Building C object CMakeFiles/cmTC_3ec89.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_3ec89
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef unsetenv
+  return ((int*)(&unsetenv))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the qsort exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_b7680"
+[1/2] Building C object CMakeFiles/cmTC_b7680.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_b7680
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef qsort
+  return ((int*)(&qsort))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the abs exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_58690"
+[1/2] Building C object CMakeFiles/cmTC_58690.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_58690
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef abs
+  return ((int*)(&abs))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the bcopy exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_1d0d4"
+[1/2] Building C object CMakeFiles/cmTC_1d0d4.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_1d0d4
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef bcopy
+  return ((int*)(&bcopy))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the memset exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_74c3c"
+[1/2] Building C object CMakeFiles/cmTC_74c3c.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_74c3c
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef memset
+  return ((int*)(&memset))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the memcpy exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_25732"
+[1/2] Building C object CMakeFiles/cmTC_25732.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_25732
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef memcpy
+  return ((int*)(&memcpy))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the memmove exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_63712"
+[1/2] Building C object CMakeFiles/cmTC_63712.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_63712
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef memmove
+  return ((int*)(&memmove))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the memcmp exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_ae925"
+[1/2] Building C object CMakeFiles/cmTC_ae925.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_ae925
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef memcmp
+  return ((int*)(&memcmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strlen exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_93151"
+[1/2] Building C object CMakeFiles/cmTC_93151.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_93151
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strlen
+  return ((int*)(&strlen))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strchr exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_54d70"
+[1/2] Building C object CMakeFiles/cmTC_54d70.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_54d70
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strchr
+  return ((int*)(&strchr))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strrchr exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_c9f1f"
+[1/2] Building C object CMakeFiles/cmTC_c9f1f.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_c9f1f
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strrchr
+  return ((int*)(&strrchr))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strstr exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_0f7f2"
+[1/2] Building C object CMakeFiles/cmTC_0f7f2.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_0f7f2
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strstr
+  return ((int*)(&strstr))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strtok_r exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_f7ae9"
+[1/2] Building C object CMakeFiles/cmTC_f7ae9.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_f7ae9
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtok_r
+  return ((int*)(&strtok_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strtol exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_d2e01"
+[1/2] Building C object CMakeFiles/cmTC_d2e01.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_d2e01
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtol
+  return ((int*)(&strtol))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strtoul exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_e2215"
+[1/2] Building C object CMakeFiles/cmTC_e2215.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_e2215
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtoul
+  return ((int*)(&strtoul))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strtoll exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_e29ed"
+[1/2] Building C object CMakeFiles/cmTC_e29ed.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_e29ed
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtoll
+  return ((int*)(&strtoll))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strtoull exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_4e9fe"
+[1/2] Building C object CMakeFiles/cmTC_4e9fe.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_4e9fe
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtoull
+  return ((int*)(&strtoull))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the atoi exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_0afc7"
+[1/2] Building C object CMakeFiles/cmTC_0afc7.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_0afc7
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef atoi
+  return ((int*)(&atoi))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the atof exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_40527"
+[1/2] Building C object CMakeFiles/cmTC_40527.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_40527
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef atof
+  return ((int*)(&atof))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strcmp exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_b1916"
+[1/2] Building C object CMakeFiles/cmTC_b1916.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_b1916
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcmp
+  return ((int*)(&strcmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strncmp exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_92d67"
+[1/2] Building C object CMakeFiles/cmTC_92d67.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_92d67
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strncmp
+  return ((int*)(&strncmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strcasecmp exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_2fbdd"
+[1/2] Building C object CMakeFiles/cmTC_2fbdd.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_2fbdd
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcasecmp
+  return ((int*)(&strcasecmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strncasecmp exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_cc269"
+[1/2] Building C object CMakeFiles/cmTC_cc269.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_cc269
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strncasecmp
+  return ((int*)(&strncasecmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the wcscmp exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_94cf0"
+[1/2] Building C object CMakeFiles/cmTC_94cf0.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_94cf0
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcscmp
+  return ((int*)(&wcscmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the wcsdup exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_60a1f"
+[1/2] Building C object CMakeFiles/cmTC_60a1f.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_60a1f
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcsdup
+  return ((int*)(&wcsdup))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the wcslen exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_48376"
+[1/2] Building C object CMakeFiles/cmTC_48376.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_48376
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcslen
+  return ((int*)(&wcslen))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the wcsncmp exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_877dd"
+[1/2] Building C object CMakeFiles/cmTC_877dd.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_877dd
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcsncmp
+  return ((int*)(&wcsncmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the wcsstr exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_11f5b"
+[1/2] Building C object CMakeFiles/cmTC_11f5b.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_11f5b
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcsstr
+  return ((int*)(&wcsstr))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the wcscasecmp exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_a4ede"
+[1/2] Building C object CMakeFiles/cmTC_a4ede.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_a4ede
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcscasecmp
+  return ((int*)(&wcscasecmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the wcsncasecmp exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_60e17"
+[1/2] Building C object CMakeFiles/cmTC_60e17.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_60e17
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcsncasecmp
+  return ((int*)(&wcsncasecmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the sscanf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_8996e"
+[1/2] Building C object CMakeFiles/cmTC_8996e.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_8996e
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sscanf
+  return ((int*)(&sscanf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the vsscanf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_bb48f"
+[1/2] Building C object CMakeFiles/cmTC_bb48f.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_bb48f
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef vsscanf
+  return ((int*)(&vsscanf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the vsnprintf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_c5581"
+[1/2] Building C object CMakeFiles/cmTC_c5581.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_c5581
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef vsnprintf
+  return ((int*)(&vsnprintf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the fseeko exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_83333"
+[1/2] Building C object CMakeFiles/cmTC_83333.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_83333
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fseeko
+  return ((int*)(&fseeko))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the _Exit exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_96ef3"
+[1/2] Building C object CMakeFiles/cmTC_96ef3.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_96ef3
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _Exit
+  return ((int*)(&_Exit))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the sigaction exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_d0697"
+[1/2] Building C object CMakeFiles/cmTC_d0697.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_d0697
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <signal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sigaction
+  return ((int*)(&sigaction))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the setjmp exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_af80b"
+[1/2] Building C object CMakeFiles/cmTC_af80b.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_af80b
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <setjmp.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setjmp
+  return ((int*)(&setjmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the nanosleep exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_aeaa9"
+[1/2] Building C object CMakeFiles/cmTC_aeaa9.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_aeaa9
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <time.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef nanosleep
+  return ((int*)(&nanosleep))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the sysconf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_6c610"
+[1/2] Building C object CMakeFiles/cmTC_6c610.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_6c610
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sysconf
+  return ((int*)(&sysconf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the getauxval exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_40a12"
+[1/2] Building C object CMakeFiles/cmTC_40a12.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_40a12
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/auxv.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getauxval
+  return ((int*)(&getauxval))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the poll exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_bfb75"
+[1/2] Building C object CMakeFiles/cmTC_bfb75.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_bfb75
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <poll.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef poll
+  return ((int*)(&poll))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pow exists in the m passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_4b370"
+[1/2] Building C object CMakeFiles/cmTC_4b370.dir/CheckFunctionExists.c.o
+<command-line>:0:23: warning: conflicting types for built-in function ‘pow’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+[2/2] Linking C executable cmTC_4b370
+
+
+Determining if the atan exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_0e7bd"
+[1/2] Building C object CMakeFiles/cmTC_0e7bd.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_0e7bd
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef atan
+  return ((int*)(&atan))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the atan2 exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_20a9c"
+[1/2] Building C object CMakeFiles/cmTC_20a9c.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_20a9c
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef atan2
+  return ((int*)(&atan2))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the atanf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_69493"
+[1/2] Building C object CMakeFiles/cmTC_69493.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_69493
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef atanf
+  return ((int*)(&atanf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the atan2f exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_ba962"
+[1/2] Building C object CMakeFiles/cmTC_ba962.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_ba962
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef atan2f
+  return ((int*)(&atan2f))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the ceil exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_46e13"
+[1/2] Building C object CMakeFiles/cmTC_46e13.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_46e13
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef ceil
+  return ((int*)(&ceil))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the ceilf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_1422e"
+[1/2] Building C object CMakeFiles/cmTC_1422e.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_1422e
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef ceilf
+  return ((int*)(&ceilf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the copysign exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_4def6"
+[1/2] Building C object CMakeFiles/cmTC_4def6.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_4def6
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef copysign
+  return ((int*)(&copysign))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the copysignf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_12dfa"
+[1/2] Building C object CMakeFiles/cmTC_12dfa.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_12dfa
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef copysignf
+  return ((int*)(&copysignf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the cos exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_8ef56"
+[1/2] Building C object CMakeFiles/cmTC_8ef56.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_8ef56
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef cos
+  return ((int*)(&cos))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the cosf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_cf047"
+[1/2] Building C object CMakeFiles/cmTC_cf047.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_cf047
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef cosf
+  return ((int*)(&cosf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the exp exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_a743a"
+[1/2] Building C object CMakeFiles/cmTC_a743a.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_a743a
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef exp
+  return ((int*)(&exp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the expf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_97eaa"
+[1/2] Building C object CMakeFiles/cmTC_97eaa.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_97eaa
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef expf
+  return ((int*)(&expf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the fabs exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_081a7"
+[1/2] Building C object CMakeFiles/cmTC_081a7.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_081a7
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fabs
+  return ((int*)(&fabs))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the fabsf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_9a188"
+[1/2] Building C object CMakeFiles/cmTC_9a188.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_9a188
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fabsf
+  return ((int*)(&fabsf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the floor exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_7684a"
+[1/2] Building C object CMakeFiles/cmTC_7684a.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_7684a
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef floor
+  return ((int*)(&floor))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the floorf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_09f9d"
+[1/2] Building C object CMakeFiles/cmTC_09f9d.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_09f9d
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef floorf
+  return ((int*)(&floorf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the fmod exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_f5f81"
+[1/2] Building C object CMakeFiles/cmTC_f5f81.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_f5f81
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fmod
+  return ((int*)(&fmod))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the fmodf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_47d26"
+[1/2] Building C object CMakeFiles/cmTC_47d26.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_47d26
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fmodf
+  return ((int*)(&fmodf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the log exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_dbbf2"
+[1/2] Building C object CMakeFiles/cmTC_dbbf2.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_dbbf2
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef log
+  return ((int*)(&log))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the logf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_719b4"
+[1/2] Building C object CMakeFiles/cmTC_719b4.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_719b4
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef logf
+  return ((int*)(&logf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the log10 exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_8afbf"
+[1/2] Building C object CMakeFiles/cmTC_8afbf.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_8afbf
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef log10
+  return ((int*)(&log10))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the log10f exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_996d6"
+[1/2] Building C object CMakeFiles/cmTC_996d6.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_996d6
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef log10f
+  return ((int*)(&log10f))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the pow exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_adbbd"
+[1/2] Building C object CMakeFiles/cmTC_adbbd.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_adbbd
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pow
+  return ((int*)(&pow))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the powf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_71980"
+[1/2] Building C object CMakeFiles/cmTC_71980.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_71980
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef powf
+  return ((int*)(&powf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the scalbn exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_77c14"
+[1/2] Building C object CMakeFiles/cmTC_77c14.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_77c14
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef scalbn
+  return ((int*)(&scalbn))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the scalbnf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_1a481"
+[1/2] Building C object CMakeFiles/cmTC_1a481.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_1a481
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef scalbnf
+  return ((int*)(&scalbnf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the sin exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_dda8e"
+[1/2] Building C object CMakeFiles/cmTC_dda8e.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_dda8e
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sin
+  return ((int*)(&sin))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the sinf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_3397e"
+[1/2] Building C object CMakeFiles/cmTC_3397e.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_3397e
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sinf
+  return ((int*)(&sinf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the sqrt exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_4b673"
+[1/2] Building C object CMakeFiles/cmTC_4b673.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_4b673
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sqrt
+  return ((int*)(&sqrt))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the sqrtf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_092c2"
+[1/2] Building C object CMakeFiles/cmTC_092c2.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_092c2
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sqrtf
+  return ((int*)(&sqrtf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the tan exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_83504"
+[1/2] Building C object CMakeFiles/cmTC_83504.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_83504
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef tan
+  return ((int*)(&tan))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the tanf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_4bfa7"
+[1/2] Building C object CMakeFiles/cmTC_4bfa7.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_4bfa7
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef tanf
+  return ((int*)(&tanf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the acos exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_fcb74"
+[1/2] Building C object CMakeFiles/cmTC_fcb74.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_fcb74
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef acos
+  return ((int*)(&acos))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the acosf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_0489c"
+[1/2] Building C object CMakeFiles/cmTC_0489c.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_0489c
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef acosf
+  return ((int*)(&acosf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the asin exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_37ad6"
+[1/2] Building C object CMakeFiles/cmTC_37ad6.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_37ad6
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef asin
+  return ((int*)(&asin))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the asinf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_3a199"
+[1/2] Building C object CMakeFiles/cmTC_3a199.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_3a199
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef asinf
+  return ((int*)(&asinf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the trunc exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_b4add"
+[1/2] Building C object CMakeFiles/cmTC_b4add.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_b4add
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef trunc
+  return ((int*)(&trunc))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the truncf exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_e9d08"
+[1/2] Building C object CMakeFiles/cmTC_e9d08.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_e9d08
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef truncf
+  return ((int*)(&truncf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function iconv_open exists in the c passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_be95e"
+[1/2] Building C object CMakeFiles/cmTC_be95e.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_be95e
+
+
+Determining if the include file alloca.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_78699"
+[1/2] Building C object CMakeFiles/cmTC_78699.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_78699
+
+
+Determining if the alloca exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_7e5fb"
+[1/2] Building C object CMakeFiles/cmTC_7e5fb.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_7e5fb
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <alloca.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef alloca
+  return ((int*)(&alloca))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the alloca exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_0f9fa"
+[1/2] Building C object CMakeFiles/cmTC_0f9fa.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_0f9fa
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef alloca
+  return ((int*)(&alloca))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C SOURCE FILE Test HAVE_SA_SIGACTION succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_da2cd"
+[1/2] Building C object CMakeFiles/cmTC_da2cd.dir/src.c.o
+[2/2] Linking C executable cmTC_da2cd
+
+Source file was:
+
+#include <signal.h>
+
+int main()
+{
+   (void)sizeof(((struct sigaction *)0)->sa_sigaction);
+   return 0;
+}
+
+Determining if the function dlopen exists in the dl passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_6a841"
+[1/2] Building C object CMakeFiles/cmTC_6a841.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_6a841
+
+
+Performing C SOURCE FILE Test OSS_FOUND succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_b9ab1"
+[1/2] Building C object CMakeFiles/cmTC_b9ab1.dir/src.c.o
+[2/2] Linking C executable cmTC_b9ab1
+
+Source file was:
+
+        #include <sys/soundcard.h>
+        int main() { int arg = SNDCTL_DSP_SETFRAGMENT; }
+Determining if the include file alsa/asoundlib.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_c32fd"
+[1/2] Building C object CMakeFiles/cmTC_c32fd.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_c32fd
+
+
+Determining if the function snd_pcm_recover exists in the asound passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_b2b1e"
+[1/2] Building C object CMakeFiles/cmTC_b2b1e.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_b2b1e
+
+
+Determining if the include file sndio.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_9c822"
+[1/2] Building C object CMakeFiles/cmTC_9c822.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_9c822
+
+
+Determining if the include file X11/Xcursor/Xcursor.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_37dbf"
+[1/2] Building C object CMakeFiles/cmTC_37dbf.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_37dbf
+
+
+Determining if the include file X11/extensions/Xinerama.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_a815c"
+[1/2] Building C object CMakeFiles/cmTC_a815c.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_a815c
+
+
+Determining if the include file X11/extensions/XInput2.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_91989"
+[1/2] Building C object CMakeFiles/cmTC_91989.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_91989
+
+
+Determining if the include file X11/extensions/Xrandr.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_fcc2f"
+[1/2] Building C object CMakeFiles/cmTC_fcc2f.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_fcc2f
+
+
+Determining if the include file X11/extensions/Xrender.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_c27b4"
+[1/2] Building C object CMakeFiles/cmTC_c27b4.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_c27b4
+
+
+Determining if the include file X11/extensions/scrnsaver.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_a8eed"
+[1/2] Building C object CMakeFiles/cmTC_a8eed.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_a8eed
+
+
+Determining if the include file X11/extensions/shape.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_505a0"
+[1/2] Building C object CMakeFiles/cmTC_505a0.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_505a0
+
+
+Determining if files X11/Xlib.h;X11/extensions/xf86vmode.h exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_f0ece"
+[1/2] Building C object CMakeFiles/cmTC_f0ece.dir/CheckIncludeFiles.c.o
+[2/2] Linking C executable cmTC_f0ece
+
+
+Determining if files X11/Xlib.h;X11/Xproto.h;X11/extensions/Xext.h exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_83d89"
+[1/2] Building C object CMakeFiles/cmTC_83d89.dir/CheckIncludeFiles.c.o
+[2/2] Linking C executable cmTC_83d89
+
+
+Determining if the shmat exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_a0725"
+[1/2] Building C object CMakeFiles/cmTC_a0725.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_a0725
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/shm.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef shmat
+  return ((int*)(&shmat))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C SOURCE FILE Test HAVE_CONST_XEXT_ADDDISPLAY succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_f59db"
+[1/2] Building C object CMakeFiles/cmTC_f59db.dir/src.c.o
+[2/2] Linking C executable cmTC_f59db
+
+Source file was:
+
+          #include <X11/Xlib.h>
+          #include <X11/Xproto.h>
+          #include <X11/extensions/Xext.h>
+          #include <X11/extensions/extutil.h>
+          extern XExtDisplayInfo* XextAddDisplay(XExtensionInfo* a,Display* b,_Xconst char* c,XExtensionHooks* d,int e,XPointer f);
+          int main(int argc, char **argv) {}
+Performing C SOURCE FILE Test HAVE_XGENERICEVENT succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_8a965"
+[1/2] Building C object CMakeFiles/cmTC_8a965.dir/src.c.o
+[2/2] Linking C executable cmTC_8a965
+
+Source file was:
+
+          #include <X11/Xlib.h>
+          int main(int argc, char **argv) {
+            Display *display;
+            XEvent event;
+            XGenericEventCookie *cookie = &event.xcookie;
+            XNextEvent(display, &event);
+            XGetEventData(display, cookie);
+            XFreeEventData(display, cookie); }
+Determining if the XkbKeycodeToKeysym exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_769e2"
+[1/2] Building C object CMakeFiles/cmTC_769e2.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_769e2
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <X11/Xlib.h>
+#include <X11/XKBlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef XkbKeycodeToKeysym
+  return ((int*)(&XkbKeycodeToKeysym))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C SOURCE FILE Test HAVE_XINPUT2_MULTITOUCH succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_d00c1"
+[1/2] Building C object CMakeFiles/cmTC_d00c1.dir/src.c.o
+[2/2] Linking C executable cmTC_d00c1
+
+Source file was:
+
+            #include <X11/Xlib.h>
+            #include <X11/Xproto.h>
+            #include <X11/extensions/XInput2.h>
+            int event_type = XI_TouchBegin;
+            XITouchClassInfo *t;
+            Status XIAllowTouchEvents(Display *a,int b,unsigned int c,Window d,int f)
+            {
+              return (Status)0;
+            }
+            int main(int argc, char **argv) {}
+Performing C SOURCE FILE Test HAVE_VIDEO_OPENGL succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_66060"
+[1/2] Building C object CMakeFiles/cmTC_66060.dir/src.c.o
+[2/2] Linking C executable cmTC_66060
+
+Source file was:
+
+        #include <GL/gl.h>
+        #include <GL/glx.h>
+        int main(int argc, char** argv) {}
+Performing C SOURCE FILE Test HAVE_VIDEO_OPENGL_EGL succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_5dfa1"
+[1/2] Building C object CMakeFiles/cmTC_5dfa1.dir/src.c.o
+[2/2] Linking C executable cmTC_5dfa1
+
+Source file was:
+
+        #define EGL_API_FB
+        #include <EGL/egl.h>
+        int main (int argc, char** argv) {}
+Performing C SOURCE FILE Test HAVE_VIDEO_OPENGLES_V1 succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_4a81c"
+[1/2] Building C object CMakeFiles/cmTC_4a81c.dir/src.c.o
+[2/2] Linking C executable cmTC_4a81c
+
+Source file was:
+
+      #include <GLES/gl.h>
+      #include <GLES/glext.h>
+      int main (int argc, char** argv) {}
+Performing C SOURCE FILE Test HAVE_VIDEO_OPENGLES_V2 succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_c9a52"
+[1/2] Building C object CMakeFiles/cmTC_c9a52.dir/src.c.o
+[2/2] Linking C executable cmTC_c9a52
+
+Source file was:
+
+      #include <GLES2/gl2.h>
+      #include <GLES2/gl2ext.h>
+      int main (int argc, char** argv) {}
+Performing C SOURCE FILE Test HAVE_INPUT_EVENTS succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_9e7d3"
+[1/2] Building C object CMakeFiles/cmTC_9e7d3.dir/src.c.o
+[2/2] Linking C executable cmTC_9e7d3
+
+Source file was:
+
+        #include <linux/input.h>
+        #ifndef EVIOCGNAME
+        #error EVIOCGNAME() ioctl not available
+        #endif
+        int main(int argc, char** argv) {}
+Performing C SOURCE FILE Test HAVE_INPUT_KD succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_ab881"
+[1/2] Building C object CMakeFiles/cmTC_ab881.dir/src.c.o
+src.c: In function ‘main’:
+src.c:9:13: warning: implicit declaration of function ‘ioctl’ [-Wimplicit-function-declaration]
+             ioctl(0, KDGKBENT, &kbe);
+             ^~~~~
+[2/2] Linking C executable cmTC_ab881
+
+Source file was:
+
+        #include <linux/kd.h>
+        #include <linux/keyboard.h>
+
+        int main(int argc, char **argv)
+        {
+            struct kbentry kbe;
+            kbe.kb_table = KG_CTRL;
+            ioctl(0, KDGKBENT, &kbe);
+        }
+Determining if the include file libudev.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_3f2de"
+[1/2] Building C object CMakeFiles/cmTC_3f2de.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_3f2de
+
+
+Determining if the include file sys/inotify.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_65b85"
+[1/2] Building C object CMakeFiles/cmTC_65b85.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_65b85
+
+
+Determining if the inotify_init exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_6fb25"
+[1/2] Building C object CMakeFiles/cmTC_6fb25.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_6fb25
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/inotify.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef inotify_init
+  return ((int*)(&inotify_init))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the inotify_init1 exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_5ba13"
+[1/2] Building C object CMakeFiles/cmTC_5ba13.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_5ba13
+
+File /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/inotify.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef inotify_init1
+  return ((int*)(&inotify_init1))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C SOURCE FILE Test HAVE_PTHREADS succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_5a7ab"
+[1/2] Building C object CMakeFiles/cmTC_5a7ab.dir/src.c.o
+[2/2] Linking C executable cmTC_5a7ab
+
+Return value: 1
+Source file was:
+
+        #include <pthread.h>
+        int main(int argc, char** argv) {
+          pthread_attr_t type;
+          pthread_attr_init(&type);
+          return 0;
+        }
+Performing C SOURCE FILE Test HAVE_RECURSIVE_MUTEXES succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_23831"
+[1/2] Building C object CMakeFiles/cmTC_23831.dir/src.c.o
+[2/2] Linking C executable cmTC_23831
+
+Source file was:
+
+        #include <pthread.h>
+        int main(int argc, char **argv) {
+          pthread_mutexattr_t attr;
+          pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE);
+          return 0;
+        }
+Performing C SOURCE FILE Test HAVE_PTHREADS_SEM succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_2c412"
+[1/2] Building C object CMakeFiles/cmTC_2c412.dir/src.c.o
+[2/2] Linking C executable cmTC_2c412
+
+Source file was:
+#include <pthread.h>
+                                 #include <semaphore.h>
+                                 int main(int argc, char **argv) { return 0; }
+Performing C SOURCE FILE Test HAVE_SEM_TIMEDWAIT succeeded with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_0e346"
+[1/2] Building C object CMakeFiles/cmTC_0e346.dir/src.c.o
+[2/2] Linking C executable cmTC_0e346
+
+Source file was:
+
+              #include <pthread.h>
+              #include <semaphore.h>
+              int main(int argc, char **argv) {
+                  sem_timedwait(NULL, NULL);
+                  return 0;
+              }
+Determining if files pthread.h exist passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_7ae77"
+[1/2] Building C object CMakeFiles/cmTC_7ae77.dir/CheckIncludeFiles.c.o
+[2/2] Linking C executable cmTC_7ae77
+
+
+Determining if the include file linux/version.h exists passed with the following output:
+Change Dir: /home/afar0308/Documents/GE-Game-Engine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_2b3a1"
+[1/2] Building C object CMakeFiles/cmTC_2b3a1.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_2b3a1
 
 

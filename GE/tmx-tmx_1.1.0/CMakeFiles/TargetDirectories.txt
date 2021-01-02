@@ -1,0 +1,13 @@
+/home/afar0308/Downloads/Compressed/tmx-tmx_1.1.0/CMakeFiles/install/strip.dir
+/home/afar0308/Downloads/Compressed/tmx-tmx_1.1.0/CMakeFiles/edit_cache.dir
+/home/afar0308/Downloads/Compressed/tmx-tmx_1.1.0/CMakeFiles/rebuild_cache.dir
+/home/afar0308/Downloads/Compressed/tmx-tmx_1.1.0/CMakeFiles/list_install_components.dir
+/home/afar0308/Downloads/Compressed/tmx-tmx_1.1.0/CMakeFiles/install/local.dir
+/home/afar0308/Downloads/Compressed/tmx-tmx_1.1.0/CMakeFiles/tmx.dir
+/home/afar0308/Downloads/Compressed/tmx-tmx_1.1.0/CMakeFiles/install.dir
+/home/afar0308/Downloads/Compressed/tmx-tmx_1.1.0/doc/CMakeFiles/install/strip.dir
+/home/afar0308/Downloads/Compressed/tmx-tmx_1.1.0/doc/CMakeFiles/install.dir
+/home/afar0308/Downloads/Compressed/tmx-tmx_1.1.0/doc/CMakeFiles/install/local.dir
+/home/afar0308/Downloads/Compressed/tmx-tmx_1.1.0/doc/CMakeFiles/list_install_components.dir
+/home/afar0308/Downloads/Compressed/tmx-tmx_1.1.0/doc/CMakeFiles/edit_cache.dir
+/home/afar0308/Downloads/Compressed/tmx-tmx_1.1.0/doc/CMakeFiles/rebuild_cache.dir
