@@ -5,7 +5,7 @@ include(CTest)
 enable_testing()
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/GE)
-add_executable(GameEngineExample main.cpp)
+add_executable(GameEngineExample main.cpp StateMachine.h GameState.cpp menu.cpp game.cpp)
 target_compile_options(GameEngineExample PRIVATE -O0)
 target_include_directories(GameEngineExample PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/GE/include)
 target_link_libraries(GameEngineExample PRIVATE GameEngineLibrary)

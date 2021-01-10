@@ -134,7 +134,7 @@ void GE::Sprite::moveVertical(double velocity)
  * @param y position y to draw on screen
  * @param pos image clip position of sprite to draw on screen
  */
-void GE::Sprite::draw(double dt)
+void GE::Sprite::render(double dt)
 {
 	//render quad
 	SDL_Rect renderQuad = {(int)_position_x, (int)_position_y, _rect.w, _rect.h};

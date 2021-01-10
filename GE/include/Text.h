@@ -25,6 +25,7 @@ namespace GE
         double _scroll_speed = 0.5;
         bool _change_text = true;
         bool _scroll_text = false;
+        double _x = 0, _y = 0;
 
     public:
         //constructor
@@ -35,7 +36,8 @@ namespace GE
         bool change();
         void scrollText(bool scroll);
         void changeScrollSpeed(double scroll_speed);
-        void draw(double x, double y, double dt);
+        void setPosition(double x, double y);
+        void render(double dt);
     };
 } // namespace GE
 

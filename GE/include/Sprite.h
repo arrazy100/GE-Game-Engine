@@ -53,7 +53,7 @@ namespace GE
 		void setPositionY(double y);
 		void moveHorizontal(double velocity);
 		void moveVertical(double velocity);
-		void draw(double dt);
+		void render(double dt);
 		void createAnimation(std::string animation_key, SDL_Rect frame_pos, double frame_size[2]);
 		void setAnimation(std::string animation_key, double speed);
 		void resumeAnimation();

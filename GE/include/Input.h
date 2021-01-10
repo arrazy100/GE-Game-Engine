@@ -9,14 +9,15 @@ namespace GE
 	class Input
 	{
         private:
-            const Uint8* _keyboard_state = NULL;
-            std::string _last_key = "";
+            size_t _keyboard_size = sizeof(Uint8) * SDL_NUM_SCANCODES;
+            Uint8 _keyboard_state[SDL_NUM_SCANCODES];
+            Uint8 _last_state[SDL_NUM_SCANCODES];
         public:
             Input();
             ~Input();
             void updateKeyboard();
-            bool getKeyboardPressed(std::string key);
-            bool getKeyboardReleased(std::string key);
+            bool getKeyboardPressed(const std::string key);
+            bool getKeyboardReleased(const std::string key);
             bool getLeftMouseClicked(int* mouse_x, int* mouse_y);
             bool getRightMouseClicked(int* mouse_x, int* mouse_y);
             bool getMiddleMouseClicked(int* mouse_x, int* mouse_y);

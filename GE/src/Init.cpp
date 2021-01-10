@@ -144,6 +144,8 @@ void GE::Init::initCamera(int width, int height)
 
 void GE::Init::setCamera(GE::Sprite* object)
 {
+	if (!_world) return;
+
 	int world_width, world_height;
 	SDL_QueryTexture(_world, NULL, NULL, &world_width, &world_height);
 	
@@ -157,6 +159,8 @@ void GE::Init::setCamera(GE::Sprite* object)
 
 void GE::Init::updateCamera()
 {
+	if (!_world) return;
+
 	SDL_SetRenderTarget(_renderer, NULL);
 	SDL_RenderCopy(_renderer, _world, &_camera, NULL);
 }
@@ -164,6 +168,12 @@ void GE::Init::updateCamera()
 int GE::Init::getCameraX()
 {
 	return _camera.x;
+}
+
+void GE::Init::removeCamera()
+{
+	SDL_DestroyTexture(_world);
+	_world = NULL;
 }
 
 void GE::Init::initBox2DWorld(b2Vec2 gravity)

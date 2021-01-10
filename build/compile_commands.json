@@ -7,6 +7,24 @@
 
 {
   "directory": "/home/afar0308/Documents/GE-Game-Engine/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -I../GE/include -I../GE/box2d/include -I../GE/tmx-tmx_1.1.0/src  -g   -O0 -o CMakeFiles/GameEngineExample.dir/GameState.cpp.o -c /home/afar0308/Documents/GE-Game-Engine/GameState.cpp",
+  "file": "/home/afar0308/Documents/GE-Game-Engine/GameState.cpp"
+},
+
+{
+  "directory": "/home/afar0308/Documents/GE-Game-Engine/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -I../GE/include -I../GE/box2d/include -I../GE/tmx-tmx_1.1.0/src  -g   -O0 -o CMakeFiles/GameEngineExample.dir/menu.cpp.o -c /home/afar0308/Documents/GE-Game-Engine/menu.cpp",
+  "file": "/home/afar0308/Documents/GE-Game-Engine/menu.cpp"
+},
+
+{
+  "directory": "/home/afar0308/Documents/GE-Game-Engine/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -I../GE/include -I../GE/box2d/include -I../GE/tmx-tmx_1.1.0/src  -g   -O0 -o CMakeFiles/GameEngineExample.dir/game.cpp.o -c /home/afar0308/Documents/GE-Game-Engine/game.cpp",
+  "file": "/home/afar0308/Documents/GE-Game-Engine/game.cpp"
+},
+
+{
+  "directory": "/home/afar0308/Documents/GE-Game-Engine/build",
   "command": "/usr/bin/x86_64-linux-gnu-g++-7   -I../GE/include -I../GE/box2d/include -I../GE/tmx-tmx_1.1.0/src -isystem /usr/include/SDL2 -I../GE/box2d/src/../include  -g   -o GE/CMakeFiles/GameEngineLibrary.dir/src/Box2D.cpp.o -c /home/afar0308/Documents/GE-Game-Engine/GE/src/Box2D.cpp",
   "file": "/home/afar0308/Documents/GE-Game-Engine/GE/src/Box2D.cpp"
 },

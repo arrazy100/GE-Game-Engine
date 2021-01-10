@@ -175,11 +175,11 @@ void GE::Tilemap::render(double dt)
     setColor(_map->backgroundcolor);
     for (int i = 0; i < _tiles.size(); i++)
     {
-        _tiles[i]->draw(dt);
+        _tiles[i]->render(dt);
     }
     for (auto it = _removable_objects.begin(); it != _removable_objects.end(); it++)
     {
-        it->first->draw(dt);
+        it->first->render(dt);
     }
 }
 

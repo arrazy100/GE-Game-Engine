@@ -40,6 +40,7 @@ namespace GE
 		void setCamera(GE::Sprite* object);
 		void updateCamera();
 		int getCameraX();
+		void removeCamera();
 		void initBox2DWorld(b2Vec2 gravity);
 		void updateBox2DWorld(double dt);
 		b2World* getBox2DWorld();

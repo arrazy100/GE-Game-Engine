@@ -82,7 +82,13 @@ void GE::Text::changeScrollSpeed(double scroll_speed)
     _scroll_speed = scroll_speed;
 }
 
-void GE::Text::draw(double x, double y, double dt)
+void GE::Text::setPosition(double x, double y)
+{
+    _x = x;
+    _y = y;
+}
+
+void GE::Text::render(double dt)
 {
     if (_scroll_text)
     {
@@ -105,7 +111,7 @@ void GE::Text::draw(double x, double y, double dt)
     {
         _change_text = false;
     }
-    _dstrect.x = x;
-    _dstrect.y = y;
+    _dstrect.x = _x;
+    _dstrect.y = _y;
     SDL_RenderCopy(_renderer, _texture, NULL, &_dstrect);
 }
