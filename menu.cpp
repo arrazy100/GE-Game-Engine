@@ -1,7 +1,3 @@
-#include <memory>
-#include <vector>
-#include <string>
-
 #include <Input.h>
 #include <Sprite.h>
 

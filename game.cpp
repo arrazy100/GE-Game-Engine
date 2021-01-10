@@ -1,7 +1,3 @@
-#include <memory>
-#include <vector>
-#include <string>
-
 #include <Box2D.h>
 #include <Init.h>
 #include <Input.h>
